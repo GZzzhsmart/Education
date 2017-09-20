@@ -1,0 +1,151 @@
+
+.baseStyle .divLeft{float:left;width:281px;padding: 0 2px;}
+.baseStyle .divRight{float:right;width:819px;padding: 0 5px;}
+
+.msgDiv .icon.resume_focus:after{width:28px;height: 40px;top: 1px;left: -6px;}
+.hobbyicon .icon.resume_focus:after{width: 40px;height:40px;top:15px;left: 20px;}
+.baseItem .icon.resume_focus:after{width: 50px;height: 50px;top: 12px;left: 32px;}
+.custDel .cust_delete{left:12px;}
+
+.baseStyle .headDiv{width:150px;height:200px;margin:0 auto;border:6px solid rgba(255,255,255,0.9);position: relative;overflow: hidden;margin-bottom:30px;}
+.baseStyle .headDiv img{display: block;cursor:pointer;}
+.baseStyle .headDiv .headNotice{position: absolute;cursor:pointer;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);text-align: center;padding-top: 164px;color: rgba(255,255,255,.5); opacity: 0;}
+.baseStyle .headDiv:hover .headNotice{opacity:1;}
+.baseStyle .baseItem dl dt{height:67px;overflow:auto;}
+
+
+.baseStyle .msgDiv{padding:10px 20px;min-height: 50px;}
+.baseStyle .msgDiv .baseMsg{height:40px;line-height:40px;color:#fff;margin-bottom:4px;width:322px;}
+.baseStyle .msgDiv .baseMsg a{display: inline-block;font-size:16px;margin-right:4px;vertical-align: middle;color:#fff;float:left;margin-top:8px;}
+.baseStyle .msgDiv .baseDel .delete{top:11px;left:-21px;font-size: 16px;padding-left:11px;}
+.baseStyle .msgDiv input{width:230px;float:left;}
+
+
+.baseStyle .skillDiv{padding:0 20px;min-height: 50px;}
+.baseStyle .skillDiv .skillUl li{color:#fff;margin:10px 0;}
+.baseStyle .skillDiv .skillUl li span{width:214px;height:15px;position: relative;display: block;margin-top:10px;}
+.baseStyle .skillDiv .skillUl li span i{width:60%;position: absolute;display: block;left: 0;top:0;border-color:#92a3b2;border-top-style:solid;border-top-width:8px;}
+.baseStyle .skillDiv .skillUl li .skillTitle{height:30px;width:240px;}
+.baseStyle .skillDiv .baseDel .delete{top:3px;left:-21px;position: absolute;}
+
+.baseStyle .hobbyDiv{padding: 20px 15px;}
+.baseStyle .hobbyDiv dl dt{margin-bottom:10px;}
+.baseStyle .hobbyDiv dl dt span{font-size:16pt;font-weight:600;color:#92a3b2;}
+.baseStyle .hobbyDiv dl dd{margin-left:-10px;}
+.baseStyle .hobbyDiv dl dd .hobbyicon{width:80px;padding:5px;float:left;margin:5px;position:relative;border:1px solid transparent;}
+.baseStyle .hobbyDiv dl dd .hobbyicon a{display: block;width:70px;height:70px;text-align: center;font-size:40px;color:#92A3B2;}
+.baseStyle .hobbyDiv dl dd .hobbyicon span{display: block;text-align:center;color:#92a3b2;font-size:14px;width:70px;}
+.baseStyle .hobbyDiv dl dd .delete{top: 104px;left: 30px;font-size:16px}
+
+.baseStyle .nameDiv{margin-top: 0px;position:relative;}
+.baseStyle .nameDiv h1{width:100%;text-align:left;}
+.baseStyle .nameDiv h2{width:100%;text-align: left;font-weight: lighter;}
+.baseStyle .nameDiv.positonDiv{padding: 20px 40px;margin-top: -38px;}
+
+.baseStyle,.jm0203_j1{background:url(../images/j1_bg.png) repeat-y;}
+.jm0203_j1 .nameDiv h1{color:#254665;}
+.jm0203_j1 .nameDiv h2{color:#254665;}
+.jm0203_j1 .baseItem dl dt a{color:#254665;line-height:67px;height:67px;}
+.jm0203_j1 .baseItem dl dt span{color:#254665;}
+.jm0203_j1 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#254665;border-top-width:2px;}
+.jm0203_j1 .skillDiv .skillUl li span i{border-color:#92a3b2;}
+.jm0203_j1 .hobbyDiv dl dt span{color:#aab2bc;}
+.jm0203_j1 .hobbyDiv dl dd .hobbyicon a{color:#aab2bc;}
+.jm0203_j1 .hobbyDiv dl dd .hobbyicon span{color:#aab2bc;}
+.jm0203_j1 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j2{background:url(../images/j2_bg.png) repeat-y;}
+.jm0203_j2 .nameDiv h1{color:#dd415e;}
+.jm0203_j2 .nameDiv h2{color:#dd415e;}
+.jm0203_j2 .baseItem dl dt a{color:#dd415e;line-height:67px;height:67px;}
+.jm0203_j2 .baseItem dl dt span{color:#dd415e;}
+.jm0203_j2 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#dd415e;border-top-width:2px;}
+.jm0203_j2 .skillDiv .skillUl li span i{border-color:#FFB7C4;}
+.jm0203_j2 .hobbyDiv dl dt span{color:#eeb1ba;}
+.jm0203_j2 .hobbyDiv dl dd .hobbyicon a{color:#eeb1ba;}
+.jm0203_j2 .hobbyDiv dl dd .hobbyicon span{color:#eeb1ba;}
+.jm0203_j2 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j3{background:url(../images/j3_bg.png) repeat-y;}
+.jm0203_j3 .nameDiv h1{color:#967a5b;}
+.jm0203_j3 .nameDiv h2{color:#967a5b;}
+.jm0203_j3 .baseItem dl dt a{color:#967a5b;line-height:67px;height:67px;}
+.jm0203_j3 .baseItem dl dt span{color:#967a5b;}
+.jm0203_j3 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#967a5b;border-top-width:2px;}
+.jm0203_j3 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j3 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j3 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j3 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j3 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j4{background:url(../images/j4_bg.png) repeat-y;}
+.jm0203_j4 .nameDiv h1{color:#3390cd;}
+.jm0203_j4 .nameDiv h2{color:#3390cd;}
+.jm0203_j4 .baseItem dl dt a{color:#3390cd;line-height:67px;height:67px;}
+.jm0203_j4 .baseItem dl dt span{color:#3390cd;}
+.jm0203_j4 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#3390cd;border-top-width:2px;}
+.jm0203_j4 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j4 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j4 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j4 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j4 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j5{background:url(../images/j5_bg.png) repeat-y;}
+.jm0203_j5 .nameDiv h1{color:#f54f4f;}
+.jm0203_j5 .nameDiv h2{color:#f54f4f;}
+.jm0203_j5 .baseItem dl dt a{color:#f54f4f;line-height:67px;height:67px;}
+.jm0203_j5 .baseItem dl dt span{color:#f54f4f;}
+.jm0203_j5 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#f54f4f;border-top-width:2px;}
+.jm0203_j5 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j5 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j5 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j5 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j5 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j6{background:url(../images/j6_bg.png) repeat-y;}
+.jm0203_j6 .nameDiv h1{color:#4d4d4d;}
+.jm0203_j6 .nameDiv h2{color:#4d4d4d;}
+.jm0203_j6 .baseItem dl dt a{color:#4d4d4d;line-height:67px;height:67px;}
+.jm0203_j6 .baseItem dl dt span{color:#4d4d4d;}
+.jm0203_j6 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#4d4d4d;border-top-width:2px;}
+.jm0203_j6 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j6 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j6 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j6 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j6 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j7{background:url(../images/j7_bg.png) repeat-y;}
+.jm0203_j7 .nameDiv h1{color:#aa8460;}
+.jm0203_j7 .nameDiv h2{color:#aa8460;}
+.jm0203_j7 .baseItem dl dt a{color:#aa8460;line-height:67px;height:67px;}
+.jm0203_j7 .baseItem dl dt span{color:#aa8460;}
+.jm0203_j7 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#aa8460;border-top-width:2px;}
+.jm0203_j7 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j7 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j7 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j7 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j7 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j8{background:url(../images/j8_bg.png) repeat-y;}
+.jm0203_j8 .nameDiv h1{color:#76ba31;}
+.jm0203_j8 .nameDiv h2{color:#76ba31;}
+.jm0203_j8 .baseItem dl dt a{color:#76ba31;line-height:67px;height:67px;}
+.jm0203_j8 .baseItem dl dt span{color:#76ba31;}
+.jm0203_j8 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#76ba31;border-top-width:2px;}
+.jm0203_j8 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j8 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j8 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j8 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j8 .baseItem dl dd{color:#2f2c28;}
+
+.jm0203_j9{background:url(../images/j9_bg.png) repeat-y;}
+.jm0203_j9 .nameDiv h1{color:#647ec9;}
+.jm0203_j9 .nameDiv h2{color:#647ec9;}
+.jm0203_j9 .baseItem dl dt a{color:#647ec9;line-height:67px;height:67px;}
+.jm0203_j9 .baseItem dl dt span{color:#647ec9;}
+.jm0203_j9 .baseItem dl dt span div.Border{border-top-style:solid;border-top-color:#647ec9;border-top-width:2px;}
+.jm0203_j9 .skillDiv .skillUl li span i{border-color:rgba(234, 234, 234, 0.9);}
+.jm0203_j9 .hobbyDiv dl dt span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j9 .hobbyDiv dl dd .hobbyicon a{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j9 .hobbyDiv dl dd .hobbyicon span{color:rgba(234, 234, 234, 0.9);}
+.jm0203_j9 .baseItem dl dd{color:#2f2c28;}

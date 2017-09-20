@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://www.jianshu.com/p/8af7e08e642d -->
+<html><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript" src="./image/1255494d3a"></script><script src="./image/nr-1016.min.js"></script><script src="./image/push.js"></script><script async="" src="./image/analytics.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9ZWkxdRxxDUVZE","queueTime":2,"applicationTime":46,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="description" content="大学生在校期间可能会有这样的疑问：将来就业干啥好呢？ 如果你是学计算机的，将来想进入软件和互联网行业， 恭喜， 这是个好行业， 薪水很高， 也不需靠关系， 一切靠实力说话， 不需要有个好爸爸。 坏处是， 这个行业需要极为繁重的脑力和体力劳动 , 加班也是司空见惯的事情。 接下来的问题是： 现在软件和互联网大概有哪些方向？ 看看下文的解释： 1、首先是需求从哪里来? 1.1 客户的项目 如果做...">
+  <meta property="wb:webmaster" content="294ec9de89e7fadb">
+  <meta property="qc:admins" content="104102651453316562112116375">
+  <meta property="qc:admins" content="11635613706305617">
+  <meta property="qc:admins" content="1163561616621163056375">
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/p/8af7e08e642d">
+    <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/9404244">
+  <!-- End -->
+
+  <!--  Meta for Twitter Card -->
+  <meta content="summary" property="twitter:card">
+  <meta content="@jianshucom" property="twitter:site">
+  <meta content="谈谈程序猿的职业方向" property="twitter:title">
+  <meta content="大学生在校期间可能会有这样的疑问：将来就业干啥好呢？ 如果你是学计算机的，将来想进入软件和互联网行业， 恭喜， 这是个好行业， 薪水很高， 也不需靠关系， 一切靠实力说话， 不需要有个好爸爸。 坏处是， 这个行业需要极为繁重的脑力和体力劳动 , 加班也是司空见惯的事情。 接下来的问题是： 现在软件和互联网大概有哪些方向？ 看看下文的解释： 1、首先是需求从哪里来? 1.1 客户的项目 如果做的是客户的项目， 需求当然是从客户那里来的，当然客户绝对是软件开发的小白（其实也不能这么绝对啦， 我也见过极少客户中很优秀的软件人才），他们很难清楚的描述自己真正的业务要求， 这时候就需要有个人隆重出..." property="twitter:description">
+  <meta content="http://www.jianshu.com/p/8af7e08e642d" property="twitter:url">
+  <!-- End -->
+
+  <!--  Meta for OpenGraph -->
+  <meta property="fb:app_id" content="865829053512461">
+  <meta property="og:site_name" content="简书">
+  <meta property="og:title" content="谈谈程序猿的职业方向">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.jianshu.com/p/8af7e08e642d">
+  <meta property="og:description" content="大学生在校期间可能会有这样的疑问：将来就业干啥好呢？ 如果你是学计算机的，将来想进入软件和互联网行业， 恭喜， 这是个好行业， 薪水很高， 也不需靠关系， 一切靠实力说话， 不需要有个好爸爸。 ...">
+  <!-- End -->
+
+  
+
+  <title>谈谈程序猿的职业方向 - 简书</title>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="0t15jjSwKNUkmSHMRRSUrlBZ0TRBzswOBSd0Hflb9gV6/KnfD5Xm2mMehRkp28yA0CjhrTDVu5Fjvn7tyvkc6w==">
+  <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" media="all" href="./image/web-5796247912bee3a23555.css">
+  
+  <link rel="stylesheet" media="all" href="./image/entry-5796247912bee3a23555.css">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if IE 8]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <link href="http://baijii-common.b0.upaiyun.com/icons/favicon.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/57.png" sizes="57x57">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/72.png" sizes="72x72">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/76.png" sizes="76x76">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/114.png" sizes="114x114">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/120.png" sizes="120x120">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/apple-touch-icons/152.png" sizes="152x152">
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="http://www.jianshu.com/"><img src="./image/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo"></a>
+
+    
+
+    <div class="style-mode"><a class="style-mode-btn"><i class="iconfont ic-navigation-mode"></i></a> <div class="popover-modal" style="left: 0px; display: none;"><div class="meta"><i class="iconfont ic-navigation-night"></i><span>夜间模式</span></div> <div class="switch day-night-group"><a class="switch-btn">开</a> <a class="switch-btn active">关</a></div> <hr> <div class="switch font-family-group"><a class="switch-btn font-song">宋体</a> <a class="switch-btn font-hei active">黑体</a></div> <div class="switch"><a class="switch-btn active">简</a> <a class="switch-btn">繁</a></div></div></div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="http://www.jianshu.com/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="http://www.jianshu.com/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="http://www.jianshu.com/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input">
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+<div class="note">
+  <div class="post">
+    <div class="article">
+        <h1 class="title">谈谈程序猿的职业方向</h1>
+
+        <!-- 作者区域 -->
+        <div class="author">
+          <a class="avatar" href="http://www.jianshu.com/u/1f530971a410">
+            <img src="./image/a56d251e-2528-4ece-a118-c28c9355cf3b.png" alt="144">
+</a>          <div class="info">
+            <span class="tag">作者</span>
+            <span class="name"><a href="http://www.jianshu.com/u/1f530971a410">八戒程序猿</a></span>
+            <!-- 关注用户按钮 -->
+            <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a>
+            <!-- 文章数据信息 -->
+            <div class="meta">
+              <span class="publish-time">2017.02.21 21:53</span>
+              <span class="wordage">字数 2700</span>
+            <span class="views-count">阅读 197</span><span class="comments-count">评论 0</span><span class="likes-count">喜欢 0</span></div>
+          </div>
+          <!-- 如果是当前作者，加入编辑按钮 -->
+        </div>
+        <!-- -->
+
+        <!-- 文章内容 -->
+        <div class="show-content">
+          <p>大学生在校期间可能会有这样的疑问：将来就业干啥好呢？<br></p><p>如果你是学计算机的，将来想进入软件和互联网行业， 恭喜， 这是个好行业， 薪水很高， 也不需靠关系， 一切靠实力说话， 不需要有个好爸爸。</p><p>坏处是， &nbsp;这个行业需要极为繁重的脑力和体力劳动 , 加班也是司空见惯的事情。</p><p>接下来的问题是： 现在软件和互联网大概有哪些方向？ &nbsp;看看下文的解释：</p><p><b>1、首先是需求从哪里来?</b></p><p><b>1.1 &nbsp;客户的项目</b></p><p>如果做的是客户的项目， 需求当然是从客户那里来的，当然客户绝对是软件开发的小白（其实也不能这么绝对啦， 我也见过极少客户中很优秀的软件人才），他们很难清楚的描述自己真正的业务要求， 这时候就需要有个人隆重出场了：&nbsp;业务分析师&nbsp;， &nbsp;对于大公司， 业务分析师是专职的， 对于小公司，项目经理或者开发骨干也就硬着头皮上了。 &nbsp;业务分析师需要把需求理理清楚， 交给后面的架构人员做设计。</p><p>业务分析师如果在某个行业干久了， 就会变成业务专家， &nbsp;例如你把国内各大银行的核心系统项目都做了个遍， 那你对银行业务的熟悉程度甚至可能超过银行的特定人员， 这时候你就超级值钱了， 不仅仅能分析业务， 更能够帮助银行优化业务， 你说牛不牛</p><p>？</p><p>问： 业务分析师需要懂技术吗？</p><p>答： 最好是懂一点，你分析出来的东西是要码农们实现的， 如果不考虑现有的技术，一味地迎合用户， 肯定会被码农们骂死。</p><p>如果你是由程序员成长起来的业务专家， 技术精湛， 那就坐着数钱玩吧。</p><p><b></b></p><p><b>1.2 &nbsp;公司的产品</b></p><p>如果你做的是产品， 例如微信， QQ, &nbsp;淘宝 ， 魔兽世界，征途， 大话西游， 那需求其实是自己公司的人来定义的。</p><p>定义这个需求的现在有个时髦的职业：&nbsp;产品经理。 &nbsp; 像张小龙就是微信的超级产品经理， &nbsp;史玉柱就是征途的骨灰级产品经理。</p><p>产品经理主要根据用户的心理和体验来设计产品， 让大家用的爽，好的产品经理现在非常吃香， 也属于紧缺人才。</p><p>问： 产品经理需要懂技术吗？</p><p>答： 需要， 最好是从程序员成长起来的， 知道一个产品设计实现的难度， 要不然只顾自己爽 ， 也会被码农骂死。</p><p><b>2、设计和开发</b></p><p><b>2.1 架构师</b></p><p>听起来很高大上的一个职位， 但是需要强悍的技术实力和深厚的技术积累</p><p>架构师的成长需要历练， 需要技术的广度， 和适当的深度。</p><p>设计优雅，灵活，可扩展的架构是架构师的主要工作</p><p>不能追求最新，最热的技术， 还要考虑现有团队的能力，技术的成熟度。</p><p>回复“架构师”查看《程序员都能搭建SSH了， 还要架构师干什么？》</p><p>人员需求：★</p><p>难度指数：★★★★★</p><p><b>2.2 web后端码农</b></p><p>后端码农主要实现业务逻辑， 提供接口给前端使用。</p><p>Java 当然是用的最多的， 但是也有别的相对小众的像Python, ruby on rails 等， 还有就是PHP，简单粗暴　中小网站常用，无论哪一个，学习起来都不是很难</p><p>这一块的人员需求是比较大的。</p><p>人员需求：★★★★★</p><p>难度指数：★★★</p><p><b>2.3 web前端码农</b></p><p>主要是Javascript , CSS， JQuery 等， 最近几年大家重视浏览器端用户体验， 浏览器端做的越来越炫， 所以也很火</p><p>人员需求：★★★★★</p><p>难度指数：★★★</p><p><b>2.4手机端码农</b></p><p>主要是Android, iOS , 由于移动互联网的发展， 现在很火爆， 需求量很大， 相对而言iOS的门槛高一些，程序员也少一点，不过工资高一点。</p><p>人员需求：★★★★</p><p>难度指数：★★★★</p><p><b>2.5 系统编程码农</b></p><p>有些需求很简单， 有些需求很复杂， 需要支持海量的用户 ，海量的并发， 像淘宝的双11， 像微信的春节抢红包</p><p>需要做云计算，虚拟化，分布式处理， 支持系统水平扩展。</p><p>对于海量的数据，还需要做大数据分析，从中提取有价值的信息， 例如Hadoop。</p><p>由于需要对操作系统，数据库，服务器端系统做定制开发， 甚至自己搞一套， 小公司一般没有这样的技术能力， 主要是BAT这样的公司在搞。</p><p>人员需求不是很大，&nbsp;对码农来讲， 需要在一个领域钻研的非常深， 技术稳定度比较好。</p><p>人员需求：★★</p><p>难度指数：★★★★★</p><p><b>2.6 安全</b></p><p>互联网时代，&nbsp;你的信息一不留神就有可能被偷走，&nbsp;安全变的越来越重要。</p><p>所以单单实现了功能， 满足了性能还不够， 很多公司，尤其是BAT对安全非常重视。</p><p>这个方向也需要对技术钻研的很深才可以</p><p>人员需求：★★</p><p>难度指数：★★★★★</p><p><b>3、测试</b></p><p>这个对技术要求不太高，但也需要测试相关的知识， 能够设计测试用例， 准备测试数据， 执行测试。</p><p>现在敏捷开发流行， 对测试也要求懂开发知识， 至少能够开发一些自动化的脚本。</p><p>很多女生后来转到了测试岗位， 我想主要是女生比较细心吧。</p><p>我在IBM见过一个非常优秀的测试人员： 她不仅仅能出色完成上面说的工作， 还可以参与设计开发的讨论， 经常能从测试角度提出开发人员都没有想到的问题，极大的帮助提升了软件的质量。</p><p><b>4、数据库管理员</b></p><p>几乎所有项目都需要数据库的支持， 对于大型，超大型项目， 会有一个叫做DBA的职位。他对数据库知识极为精通，平时对数据库进行管理， 开发时能帮助开发团队设计数据库，并且找出性能瓶颈， 进行性能调优。</p><p><b>5、美工/文档</b></p><p>美工：　就是对界面进行美化了，一般是由美工先出界面原型， 大家讨论，修改，确定后美工会生成各种界面元素，像图标，按钮等。</p><p>现在对美工也有一定的技术要求， 不仅仅是画界面，还要把html模板做出来， 所以美工需要懂得 HTML, &nbsp;CSS, 甚至部分Javascript。</p><p>程序员拿到html模板后，往上添加业务代码即可。</p><p>文档编写人员：小项目一般是有人兼职做， 大的项目，产品会有人专职写文档， 我2003年的时候参与过上海证券交易所的项目， 看到有个专职的文档编写人员写的Word , 是在是太专业了， 那个精美啊，完全是可以直接出版的水准。</p><p>我把它copy下来，自己都想山寨一个， 照葫芦画瓢都做不出来。</p><p><b>6、项目管理</b></p><p>项目已经开始了， 业务分析师， 架构师， 开发，测试等人一群人如饿狼扑食，势必要把项目撕个粉碎。</p><p>可以这么多人怎么协作？ &nbsp;如何管理？ 进度能不能按要求完成? &nbsp; 这就需要项目经理出马了。</p><p>项目经理，说白了就是带着大家做项目， 主要和人打交道， 需要协调各个方面的关系， 保证项目的进展顺利。</p><p>问： 项目经理需要懂技术吗？</p><p>答： 当然需要， 最好是开发出身， 要不然你就听不懂那帮码农再说什么， 只能在表面漂浮着， 没法深入项目，别人也就不服你 ， 肯定是带不好团队的。</p><p><b>7、运营</b></p><p>如果你是在开发自己的产品， 开发完成以后， 马上就会遇到一个问题， 怎么推广？</p><p>在互联网时代，世界是平的， 竞争异常激烈，一个好的软件，或者App, 或者网站， 缺乏运营， 你的技术再好也不行。</p><p>运营其实就是想方设法让你的产品被人知道， 被人用起来，这里边水很深，例如怎么写个软文？ 怎么在社交网络，微信，微博进行营销？ 怎么统计，分析，精准的定位？</p><p>这方面， 2014年以前的小米绝对是典范。 雷军的7字诀：专注，极致，口碑， 快， &nbsp;黎万强的《参与感》 都是经典。</p><p>好的互联网运营人才奇缺， 当然非常的吃香。</p><p>对编程不感兴趣的同学，不妨看看这个方向。</p><p>说了这么多职业方向， 你会发现， 绝大多数都要求懂一定的技术， 所以我其实想想说的是：</p><p>刚参加工作，&nbsp;不妨先从程序员开始， &nbsp;慢慢的再寻找自己感兴趣的方向。</p><p><a href="http://mp.weixin.qq.com/s?__biz=MzIxODE4NTUwMg==&amp;mid=2247484017&amp;idx=2&amp;sn=3a350adcde35abc4b6edbcbbfe2344cd&amp;chksm=97ef2800a098a1167b2ac68df343c514a77d7adcbacd9b0a93de9c33c85926b3894495f26c78&amp;scene=21#wechat_redirect" target="_blank">小编推荐</a></p><p><a href="http://mp.weixin.qq.com/s?__biz=MzIxODE4NTUwMg==&amp;mid=2247484017&amp;idx=2&amp;sn=3a350adcde35abc4b6edbcbbfe2344cd&amp;chksm=97ef2800a098a1167b2ac68df343c514a77d7adcbacd9b0a93de9c33c85926b3894495f26c78&amp;scene=21#wechat_redirect" target="_blank"><b>大数据hadoop+strom+spark+openstack</b></a></p><p>原文链接：码农翻身</p><p>作者：刘欣</p><div class="image-package">
+<img src="./image/4705076-7a90d2a3be2511a1" data-original-src="http://upload-images.jianshu.io/upload_images/4705076-7a90d2a3be2511a1?imageMogr2/auto-orient/strip" style="cursor: zoom-in;"><br><div class="image-caption"></div>
+</div><p><b><b>戳这里</b><b>，寻找小猪你想要的IT视频</b></b></p><div class="image-package">
+<img src="./1_files/4705076-11c89b11f5c7ff80" data-original-src="http://upload-images.jianshu.io/upload_images/4705076-11c89b11f5c7ff80?imageMogr2/auto-orient/strip" style="cursor: zoom-in;"><br><div class="image-caption"></div>
+</div><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxODE4NTUwMg==&amp;mid=2247484020&amp;idx=1&amp;sn=3bbcfcefa0b99453201a455de920505b&amp;chksm=97ef2805a098a1136b8a7fa0056ef171e3165a4c9119e5c5ea1bb916097aa3e270d735674bd0&amp;scene=4&amp;key=776fc8cdd0b88c0d22b7603b61f7601603bfed1024e8d80e63cc4ec096820baa32e4c8f197e60e91278805a59d87795ebb40da02749578969e941d380d2f536ca24e29cd328eb2eb7d52e8ac631f5875&amp;ascene=7&amp;uin=MjQ0MTY5NTU1&amp;devicetype=Windows+10&amp;version=6203005d&amp;pass_ticket=ZllXRT1qcxKxXNNnp2airl3bH0HQ%2BwFK3p4TM2i6%2FsQ%3D&amp;winzoom=1##" target="_blank">阅读原文</a></p>
+        </div>
+        <!--  -->
+
+        <div class="show-foot">
+          <a class="notebook" href="http://www.jianshu.com/nb/9763575">
+            <i class="iconfont ic-search-notebook"></i> <span>日记本</span>
+</a>          <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并标注“简书作者”。">
+            © 著作权归作者所有
+          </div>
+          <div class="modal-wrap" data-report-note="">
+            <a id="report-modal">举报文章</a>
+          </div>
+        </div>
+    </div>
+
+    <!-- 文章底部作者信息 -->
+        <div class="follow-detail">
+          <div class="info">
+            <a class="avatar" href="http://www.jianshu.com/u/1f530971a410">
+              <img src="./image/a56d251e-2528-4ece-a118-c28c9355cf3b.png" alt="144">
+</a>            <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a>
+            <a class="title" href="http://www.jianshu.com/u/1f530971a410">八戒程序猿</a>
+          <p>写了 22740 字，被 1 人关注，获得了 0 个喜欢</p></div>
+            <div class="signature">
+              <span>分享全面免费的IT开发视频资料（微信号 BjieCoder）</span>
+            </div>
+        </div>
+
+      <div class="support-author"><p>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</p> <div class="btn btn-pay">赞赏支持</div> <!----> <!----> <!----></div>
+
+    <div class="meta-bottom">
+      <div class="like"><div class="btn like-group"><div class="btn-like"><a href="http://www.jianshu.com/sign_in"><i class="iconfont ic-like"></i>喜欢</a></div> <div class="modal-wrap"><a>0</a></div></div> <!----></div>
+      <div class="share-group">
+        <a class="share-circle" data-action="weixin-share" data-toggle="tooltip" data-original-title="分享到微信">
+          <i class="iconfont ic-wechat"></i>
+        </a>
+        <a class="share-circle" data-toggle="tooltip" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/9404244/weibo/image_b1bd1b450d49.jpg&#39;, &#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));" data-original-title="分享到微博">
+          <i class="iconfont ic-weibo"></i>
+        </a>
+          <a class="share-circle" data-toggle="tooltip" href="http://cwb.assets.jianshu.io/notes/images/9404244/weibo/image_b1bd1b450d49.jpg" target="_blank" data-original-title="下载长微博图片">
+            <i class="iconfont ic-picture"></i>
+          </a>
+        <a class="share-circle more-share" tabindex="0" data-toggle="popover" data-placement="top" data-html="true" data-trigger="focus" href="javascript:void(0);" data-content="
+          &lt;ul class=&quot;share-list&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-zone&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到QQ空间&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-twitter&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-facebook&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-google&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Google+&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban&#39;)+&#39;&amp;title=&#39;+e(&#39;谈谈程序猿的职业方向&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-douban&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到豆瓣&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        " data-original-title="" title="">更多分享</a>
+      </div>
+    </div>
+    <div><div id="comment-list" class="comment-list"><div><form class="new-comment"><a class="avatar"><img src="./image/avatar_default-78d4d1f68984cd6d4379508dd94b4210.png"></a> <div class="sign-container"><a href="http://www.jianshu.com/sign_in" class="btn btn-sign">登录</a> <span>后发表评论</span></div></form></div> <div id="normal-comment-list" class="normal-comment-list"><div><!----> <div><div class="top"><span>评论</span> <a class="close-btn" style="display: none;">关闭评论</a></div> <div class="no-comment"></div> <div class="text">
+            智慧如你，不想<a href="http://www.jianshu.com/sign_in">发表一点想法</a>咩~
+          </div></div> <!---->  <div class="comments-placeholder" style="display: none;"><div class="author"><div class="avatar"></div> <div class="info"><div class="name"></div> <div class="meta"></div></div></div> <div class="text"></div> <div class="text animation-delay"></div> <div class="tool-group"><i class="iconfont ic-zan-active"></i><div class="zan"></div> <i class="iconfont ic-list-comments"></i><div class="zan"></div></div></div></div></div> <!----> <!----></div></div>
+  </div>
+
+  <div class="side-tool">
+    <ul>
+      <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+        <a href="http://www.jianshu.com/p/8af7e08e642d#"><i class="iconfont ic-backtop"></i></a>
+      </li>
+      <li data-share-note="" data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="分享文章">
+        <a tabindex="0" data-toggle="popover" data-placement="left" data-html="true" data-trigger="focus" href="javascript:void(0);" data-content="
+          &lt;ul class=&quot;share-list&quot;&gt;
+            &lt;li&gt;&lt;a class data-action=&quot;weixin-share&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-weixin&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到微信&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/9404244/weibo/image_b1bd1b450d49.jpg&#39;, &#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-weibo&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到微博&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;http://cwb.assets.jianshu.io/notes/images/9404244/weibo/image_b1bd1b450d49.jpg&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-picture&quot;&gt;&lt;/i&gt;&lt;span&gt;下载长微博图片&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-zone&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到QQ空间&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 八戒程序猿 的文章《谈谈程序猿的职业方向》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-twitter&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-facebook&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-google&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到Google+&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;http://www.jianshu.com/p/8af7e08e642d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban&#39;)+&#39;&amp;title=&#39;+e(&#39;谈谈程序猿的职业方向&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()&quot;&gt;&lt;i class=&quot;social-icon-sprite social-icon-douban&quot;&gt;&lt;/i&gt;&lt;span&gt;分享到豆瓣&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        " data-original-title="" title=""><i class="iconfont ic-share"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!---->
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"windows","read_mode":"day","read_font":"font2","note_show":{"is_author":false,"is_following_author":false,"is_liked_note":false,"uuid":"a86ffe5a-3571-4922-85d6-10f2db55ddf3"},"note":{"id":9404244,"slug":"8af7e08e642d","user_id":4705076,"notebook_id":9763575,"commentable":true,"likes_count":0,"views_count":197,"public_wordage":2700,"comments_count":0,"author":{"total_wordage":22740,"followers_count":1,"total_likes_count":0}}}</script>
+    
+    <script src="./image/babel-polyfill-5796247912bee3a23555.js"></script>
+    <script src="./image/web-base-5796247912bee3a23555.js"></script>
+<script src="./image/web-5796247912bee3a23555.js"></script>
+    
+    <script src="./image/entry-5796247912bee3a23555.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div style="display:none">
+  <script src="./image/z_stat.php" language="JavaScript"></script><script src="./image/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1258679142" target="_blank" title="站长统计">站长统计</a>
+</div>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  
+
+<!----><!----></body></html>

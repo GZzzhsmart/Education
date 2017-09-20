@@ -1,0 +1,662 @@
+﻿*{padding:0px;margin:0px;outline:none;}
+html{border-collapse:collapse;background:#f0f1f3;}
+html,body{background:#f4f4f4;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+ul,ol,li{list-style:none;color:#2F2C28;font-size:14px;font-weight:normal;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+a,a:hover{text-decoration:none;}
+a:link{text-decoration:none;}
+body, button, input, select, textarea, a,label{color:#3b3b3b;font:12px/1.5 "微软雅黑";}
+a:hover{text-decoration:none;color:#d55101;}
+a:visited{text-decoration:none;}
+img{border:none;}
+div[contenteditable] ul, div[contenteditable] ul li{list-style:disc;}
+div[contenteditable] ol, div[contenteditable] ol li{list-style:decimal;}
+.left{float: left;}
+.right{float: right;}
+
+/**提示文字获取焦点后消失*/
+::-webkit-input-placeholder{color:#BDBDBD;}
+::-moz-placeholder{color:#BDBDBD;}
+:-moz-placeholder{color:#BDBDBD;}
+:-ms-input-placeholder {color:#BDBDBD;}
+input:focus::-webkit-input-placeholder{color:transparent;}
+input:focus::-moz-placeholder{color:transparent;}
+input:focus:-moz-placeholder{color:transparent;}
+input:focus:-ms-input-placeholder{color:transparent;}
+
+/** 分页符 */
+.resumePageBreak{position:absolute;width:100%;height:1px;background:transparent;left:0;border-bottom:1px dashed #6983e4;}
+.resumePageBreak span{display:block;width:14rem;color:#fff;position:absolute;height:3rem;line-height:2.9rem;top:-1.5rem;text-align:center;left:50%;margin-left:-7rem;background:linear-gradient(to bottom,#fff,#fff,#f1f1f1);background:-webkit-linear-gradient(to bottom,#fff,#fff,#f1f1f1);border-radius:50px;border:1px dashed #6983e4;color:#6983E4;}
+
+/**字体*/
+@font-face{font-family:wbdfont;src:url(../other/iconfont.eot);src:url(../other/iconfont.eot?#iefix) format('embedded-opentype'),url(../other/iconfont.woff) format('woff'),url(../other/iconfont.ttf) format('truetype'),url(../other/iconfont.svg#wbdfont) format('svg')}
+
+.wbdfont{font-family:wbdfont!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}.icon-iconbuildingalt:before{content:"\e600"}.icon-iconid2:before{content:"\e601"}.icon-lanqiu:before{content:"\e71d"}.icon-icon08:before{content:"\e602"}.icon-icon15028:before{content:"\e603"}.icon-icon25959:before{content:"\e604"}.icon-iconquan:before{content:"\e605"}.icon-iconchengshiliebiaoquxiaoanniu:before{content:"\e606"}.icon-04:before{content:"\e607"}.icon-all:before{content:"\e608"}.icon-close:before{content:"\e609"}.icon-comments:before{content:"\e60a"}.icon-delete:before{content:"\e60b"}.icon-edit:before{content:"\e60c"}.icon-folder:before{content:"\e60d"}.icon-form:before{content:"\e60e"}.icon-pic:before{content:"\e60f"}.icon-qrcode:before{content:"\e610"}.icon-survey:before{content:"\e611"}.icon-training:before{content:"\e612"}.icon-clock:before{content:"\e613"}.icon-lanqiu1:before{content:"\e71e"}.icon-icontrashalt:before{content:"\e614"}.icon-calendar:before{content:"\e615"}.icon-603lanqiu:before{content:"\e71f"}.icon-discount:before{content:"\e616"}.icon-service:before{content:"\e617"}.icon-bags:before{content:"\e618"}.icon-gifts:before{content:"\e619"}.icon-eduiconkecheng1:before{content:"\e61a"}.icon-eduiconkecheng:before{content:"\e61b"}.icon-eduicongouwuche:before{content:"\e61c"}.icon-edufenleiruanjianyanfa:before{content:"\e61d"}.icon-edufenleibangongsheji:before{content:"\e61e"}.icon-edufenleiit:before{content:"\e61f"}.icon-icon:before{content:"\e620"}.icon-icon1:before{content:"\e621"}.icon-icon2:before{content:"\e622"}.icon-icon3:before{content:"\e623"}.icon-icon4:before{content:"\e624"}.icon-icon5:before{content:"\e625"}.icon-icon6:before{content:"\e626"}.icon-icon7:before{content:"\e627"}.icon-iconwodehuantushoucang:before{content:"\e628"}.icon-icon-close-o:before{content:"\e629"}.icon-supplierfeatures:before{content:"\e62a"}.icon-imagetext:before{content:"\e62b"}.icon-wbdiconaddress:before{content:"\e62c"}.icon-wbdiconaddress1:before{content:"\e62d"}.icon-wbdiconandroid:before{content:"\e62e"}.icon-wbdiconapple:before{content:"\e62f"}.icon-wbdiconbadminton:before{content:"\e630"}.icon-wbdiconbalance:before{content:"\e631"}.icon-wbdiconbaseball:before{content:"\e632"}.icon-wbdiconbicycle:before{content:"\e633"}.icon-wbdiconbilliards:before{content:"\e634"}.icon-wbdiconbook:before{content:"\e635"}.icon-wbdiconbook1:before{content:"\e636"}.icon-wbdiconbook2:before{content:"\e637"}.icon-wbdiconcalendar:before{content:"\e638"}.icon-wbdiconcall24:before{content:"\e639"}.icon-wbdiconcamera:before{content:"\e63a"}.icon-wbdiconcamera1:before{content:"\e63b"}.icon-wbdiconcamera2:before{content:"\e63c"}.icon-wbdiconcollect:before{content:"\e63d"}.icon-wbdiconcommaddress1:before{content:"\e63e"}.icon-wbdiconcommage1:before{content:"\e63f"}.icon-wbdiconcommcart:before{content:"\e640"}.icon-wbdiconcommedu:before{content:"\e641"}.icon-wbdiconcommemail:before{content:"\e642"}.icon-wbdiconcommmobile:before{content:"\e643"}.icon-wbdiconcommage:before{content:"\e644"}.icon-wbdiconcommaddress:before{content:"\e645"}.icon-wbdiconcommevaluate:before{content:"\e646"}.icon-wbdiconcommhonor:before{content:"\e647"}.icon-wbdiconcommintentsion:before{content:"\e648"}.icon-wbdiconcommnative:before{content:"\e649"}.icon-wbdiconcommpolitics:before{content:"\e64a"}.icon-wbdiconcommpractice:before{content:"\e64b"}.icon-wbdiconcommproject:before{content:"\e64c"}.icon-wbdiconcrown:before{content:"\e64d"}.icon-wbdiconcss:before{content:"\e64e"}.icon-wbdicondata:before{content:"\e64f"}.icon-wbdicondrum:before{content:"\e650"}.icon-wbdiconeat:before{content:"\e651"}.icon-wbdiconemail:before{content:"\e652"}.icon-wbdiconemail1:before{content:"\e653"}.icon-wbdiconemail2:before{content:"\e654"}.icon-wbdiconfacebook:before{content:"\e655"}.icon-wbdiconfilm:before{content:"\e656"}.icon-wbdiconfly:before{content:"\e657"}.icon-wbdiconfootball:before{content:"\e658"}.icon-wbdicongame:before{content:"\e659"}.icon-wbdicongolf:before{content:"\e65a"}.icon-wbdicongril:before{content:"\e65b"}.icon-wbdiconhonor:before{content:"\e65c"}.icon-wbdiconhonorsolid:before{content:"\e65d"}.icon-wbdiconhottea:before{content:"\e65e"}.icon-wbdiconhtml5:before{content:"\e65f"}.icon-wbdiconlisten:before{content:"\e660"}.icon-wbdiconlook:before{content:"\e661"}.icon-wbdiconlook1:before{content:"\e662"}.icon-wbdiconman:before{content:"\e663"}.icon-wbdiconman1:before{content:"\e664"}.icon-wbdiconmanstar:before{content:"\e665"}.icon-wbdiconmedal:before{content:"\e666"}.icon-wbdiconmenv:before{content:"\e667"}.icon-wbdiconmobile:before{content:"\e668"}.icon-wbdiconmobile1:before{content:"\e669"}.icon-wbdiconmotor:before{content:"\e66a"}.icon-wbdiconmusic:before{content:"\e66b"}.icon-wbdiconnetplay:before{content:"\e66c"}.icon-wbdiconorgan:before{content:"\e66d"}.icon-wbdiconpainting:before{content:"\e66e"}.icon-wbdiconphone:before{content:"\e66f"}.icon-wbdiconphone1:before{content:"\e670"}.icon-wbdiconplaygame:before{content:"\e671"}.icon-wbdiconposition:before{content:"\e672"}.icon-wbdiconpot:before{content:"\e673"}.icon-wbdiconqq:before{content:"\e674"}.icon-wbdiconright:before{content:"\e675"}.icon-wbdiconrugby:before{content:"\e676"}.icon-wbdiconsaxophone:before{content:"\e677"}.icon-wbdiconself:before{content:"\e678"}.icon-wbdiconsex:before{content:"\e679"}.icon-wbdiconshopping:before{content:"\e67a"}.icon-wbdiconskillae:before{content:"\e67b"}.icon-wbdiconskillai:before{content:"\e67c"}.icon-wbdiconskillau:before{content:"\e67d"}.icon-wbdiconskillbr:before{content:"\e67e"}.icon-wbdiconskilldw:before{content:"\e67f"}.icon-wbdiconskillen:before{content:"\e680"}.icon-wbdiconskillfb:before{content:"\e681"}.icon-wbdiconskillfi:before{content:"\e682"}.icon-wbdiconskillfw:before{content:"\e683"}.icon-wbdiconskillpr:before{content:"\e684"}.icon-wbdiconskillps:before{content:"\e685"}.icon-wbdiconskillsg:before{content:"\e686"}.icon-wbdiconstar:before{content:"\e687"}.icon-wbdiconstar1:before{content:"\e688"}.icon-wbdiconswimming:before{content:"\e689"}.icon-wbdicontakeapic:before{content:"\e68a"}.icon-wbdicontape:before{content:"\e68b"}.icon-wbdicontent:before{content:"\e68c"}.icon-wbdicontentbig:before{content:"\e68d"}.icon-wbdicontime:before{content:"\e68e"}.icon-wbdicontime1:before{content:"\e68f"}.icon-wbdicontime2:before{content:"\e690"}.icon-wbdiconweixin:before{content:"\e691"}.icon-wbdiconwoman:before{content:"\e692"}.icon-wbdiconwrite:before{content:"\e693"}.icon-wbdiconwrite1:before{content:"\e694"}.icon-wbdiconwrite2:before{content:"\e695"}.icon-wbdiconwrite3:before{content:"\e696"}.icon-wbdiconwrite4:before{content:"\e697"}.icon-wbdiconwrite5:before{content:"\e698"}.icon-wbdiconcommself:before{content:"\e699"}.icon-wbdiconcommmobile2:before{content:"\e69a"}.icon-wbdiconcommmobile1:before{content:"\e69b"}.icon-wbdiconcommexper:before{content:"\e69c"}.icon-wbdiconcommage2:before{content:"\e69d"}.icon-wbdiconcommcart1:before{content:"\e69e"}.icon-wbdiconcommhonor1:before{content:"\e69f"}.icon-wbdiconcommpractice1:before{content:"\e6a0"}.icon-wbdiconcommproject1:before{content:"\e6a1"}.icon-wbdiconcommpolitics1:before{content:"\e6a2"}.icon-wbdiconcommevaluate1:before{content:"\e6a3"}.icon-wbdiconcommintentsion2:before{content:"\e6a4"}.icon-wbdiconcommedu2:before{content:"\e6a5"}.icon-wbdiconskillps1:before{content:"\e6a6"}.icon-wbdiconsoftai:before{content:"\e6a7"}.icon-wbdiconsoftmp3:before{content:"\e6a8"}.icon-wbdiconsoftxls:before{content:"\e6a9"}.icon-wbdiconsofttxt:before{content:"\e6aa"}.icon-wbdiconsoftpsd:before{content:"\e6ab"}.icon-wbdiconsoftpdf:before{content:"\e6ac"}.icon-wbdiconsoftjpeg:before{content:"\e6ad"}.icon-wbdiconsoftzip:before{content:"\e6ae"}.icon-wbdiconsoftdoc:before{content:"\e6af"}.icon-wbdiconsoftnew:before{content:"\e6b0"}.icon-wbdiconsoftfla:before{content:"\e6b1"}.icon-wbdiconsoftcss:before{content:"\e6b2"}.icon-wbdiconsoftphp:before{content:"\e6b3"}.icon-wbdiconsoftgif:before{content:"\e6b4"}.icon-wbdiconsofteps:before{content:"\e6b5"}.icon-wbdiconsoftindd:before{content:"\e6b6"}.icon-wbdiconsoftttf:before{content:"\e6b7"}.icon-wbdiconsoftcdr:before{content:"\e6b8"}.icon-wbdiconsoftppt:before{content:"\e6b9"}.icon-wbdiconsoftmpeg:before{content:"\e6ba"}.icon-wbdiconsoftmov:before{content:"\e6bb"}.icon-wbdiconsoftavi:before{content:"\e6bc"}.icon-wbdiconsoftpng:before{content:"\e6bd"}.icon-wbdiconsofthtml:before{content:"\e6be"}.icon-wbdiconhobbyipod:before{content:"\e6bf"}.icon-wbdiconhobbygame:before{content:"\e6c0"}.icon-wbdiconhobbymovie:before{content:"\e6c1"}.icon-wbdiconhobbycamera1:before{content:"\e6c2"}.icon-wbdiconhobbycamera:before{content:"\e6c3"}.icon-wbdiconsofturl:before{content:"\e6c4"}.icon-wbdiconsoft3ds:before{content:"\e6c5"}.icon-wbdiconsoftrar:before{content:"\e6c6"}.icon-wbdiconsoftswf:before{content:"\e6c7"}.icon-wbdiconhobbybaseball:before{content:"\e6c8"}.icon-wbdiconhobbytennis:before{content:"\e6c9"}.icon-wbdiconhobbybike:before{content:"\e6ca"}.icon-wbdiconhobbyyoga:before{content:"\e6cb"}.icon-wbdiconhobbyboxing:before{content:"\e6cc"}.icon-wbdiconhobbyswimming:before{content:"\e6cd"}.icon-wbdiconhobbydumbbell:before{content:"\e6ce"}.icon-wbdiconhobbytreadmill:before{content:"\e6cf"}.icon-wbdiconhobbyfootball:before{content:"\e6d0"}.icon-wbdiconhobbymusic:before{content:"\e6d1"}.icon-wbdiconhobbyshoot:before{content:"\e6d2"}.icon-wbdiconhobbymac:before{content:"\e6d3"}.icon-wbdiconhobbycomputer:before{content:"\e6d4"}.icon-wbdiconinfoman12:before{content:"\e6d5"}.icon-wbdiconinfoman11:before{content:"\e6d6"}.icon-wbdiconinfoman10:before{content:"\e6d7"}.icon-wbdiconinfoman9:before{content:"\e6d8"}.icon-wbdiconinfoman8:before{content:"\e6d9"}.icon-wbdiconinfoman7:before{content:"\e6da"}.icon-wbdiconinfoman6:before{content:"\e6db"}.icon-wbdiconinfoman5:before{content:"\e6dc"}.icon-wbdiconinfoman4:before{content:"\e6dd"}.icon-wbdiconinfoman3:before{content:"\e6de"}.icon-wbdiconinfoman2:before{content:"\e6df"}.icon-wbdiconinfoman1:before{content:"\e6e0"}.icon-wbdiconbasefile:before{content:"\e6e1"}.icon-wbdiconbasedelele:before{content:"\e6e2"}.icon-wbdiconbaseset:before{content:"\e6e3"}.icon-wbdiconbasesave:before{content:"\e6e4"}.icon-wbdiconhobbydecorate:before{content:"\e6e5"}.icon-wbdiconhobbyhandmade:before{content:"\e6e6"}.icon-wbdiconhobbymegaphone:before{content:"\e6e7"}.icon-wbdiconworkedit3:before{content:"\e6e8"}.icon-wbdiconworkedit2:before{content:"\e6e9"}.icon-wbdiconworkedit1:before{content:"\e6ea"}.icon-wbdiconworkedit:before{content:"\e6eb"}.icon-wbdiconinfoself:before{content:"\e6ec"}.icon-wbdiconinfobase:before{content:"\e6ed"}.icon-wbdiconinfostop:before{content:"\e6ee"}.icon-wbdiconinfohonor1:before{content:"\e6ef"}.icon-wbdiconhobbyboat:before{content:"\e6f0"}.icon-wbdiconhobbyracing:before{content:"\e6f1"}.icon-wbdiconinfomsg:before{content:"\e6f2"}.icon-wbdiconinfoaddress1:before{content:"\e6f3"}.icon-wbdiconinfoaddress:before{content:"\e6f4"}.icon-wbdiconinfocollect:before{content:"\e6f5"}.icon-wbdiconinfohonor:before{content:"\e6f6"}.icon-wbdiconbaseprint1:before{content:"\e6f7"}.icon-wbdiconbaseprint:before{content:"\e6f8"}.icon-wbdiconbasetext:before{content:"\e6f9"}.icon-wbdiconbasemeasure:before{content:"\e6fa"}.icon-wbdiconbasegift:before{content:"\e6fb"}.icon-wbdiconbasedirection:before{content:"\e6fc"}.icon-wbdiconhobbyshopping1:before{content:"\e6fd"}.icon-wbdiconhobbyshopping:before{content:"\e6fe"}.icon-wbdiconinfoaddress2:before{content:"\e6ff"}.icon-wbdiconinfohonor3:before{content:"\e700"}.icon-wbdiconinfohonor2:before{content:"\e701"}.icon-wbdiconbasegotop:before{content:"\e702"}.icon-wbdiconhobbydeposit:before{content:"\e703"}.icon-wbdiconhobbycoupon:before{content:"\e704"}.icon-wbdiconhobbypainting:before{content:"\e705"}.icon-wbdiconinfoexper1:before{content:"\e706"}.icon-wbdiconbaseclock:before{content:"\e707"}.icon-wbdiconbasefile1:before{content:"\e708"}.icon-wbdiconinfoage2:before{content:"\e709"}.icon-wbdiconinfoage1:before{content:"\e70a"}.icon-wbdiconhobbyblackboard:before{content:"\e70b"}.icon-wbdiconhobbyshop:before{content:"\e70c"}.icon-wbdiconhobbyrepair:before{content:"\e70d"}.icon-wbdiconhobbycar:before{content:"\e70e"}.icon-wbdicondefaultbase:before{content:"\e70f"}.icon-wbdicondefaultemail:before{content:"\e710"}.icon-wbdicondefaultmobile:before{content:"\e711"}.icon-wbdicondefaultaddress:before{content:"\e712"}.icon-wbdicondefaultage:before{content:"\e713"}.icon-wbdicondefaultoutexper:before{content:"\e714"}.icon-wbdicondefaultinexper:before{content:"\e715"}.icon-wbdicondefaultoutdoor:before{content:"\e716"}.icon-wbdicondefaultcart:before{content:"\e717"}.icon-wbdicondefaultproject:before{content:"\e718"}.icon-wbdicondefaultself:before{content:"\e719"}.icon-wbdicondefaulthonor:before{content:"\e71a"}.icon-wbdicondefaultexper:before{content:"\e71b"}.icon-wbdicondefaultedu:before{content:"\e71c"}
+.icon_search{position:relative;height:24px;width:120px;}
+.icon_search input{border:1px solid #e3e5ec;padding:0 40px;width:635px;height:32px;line-height:32px;position:absolute;left:0;top:0;}
+.icon_search .search{display:block;background:url("../images/search.png") center no-repeat;height:31px;width:31px;position:absolute;left:0;top:0;}
+
+/*清除浮动*/
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;font-size: 0;}
+.clearfix {display: inline-block; }
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+.clearfix {zoom: 1;}
+.resume_hidden_module{display:none;}
+.baseditBar .mobanBar .editBox .coselectBtn .more,.xzmb-tool .xzmb-btn,.headInner .otherNav ul li a,.edBtn,.edtitleBox span,.nrmkList li span,.nrmkBtn .more,.editBox .addBtn span,.picstyList ul li,.picborList ul li,.mubaninfoBar ul li.left i,.editBtn li,.baseditBar .borderBar .editBox .borderList .borsize,.baseditBar .borderBar .editBox .borderList .borstyle,.picborList .borbtn{background:url(../images/zxbjSp.png);}
+
+.resume_line{cursor:pointer;height:0px!important;}
+
+.pop-layer-box {position:fixed;z-index:9999;color:#d3d3d3;font-size:18px;padding:20px 41px;background-color:#646464;border-radius:3px;width:400px;text-align:center;left:0;right:0;margin:auto;top:30%;display:none;opacity:0;}
+
+/************************************** 编辑样式 ************************************/
+/**剪切预览*/
+#head_area .head_image{text-align:center;}
+#head_area .head_image img{max-width:300px;max-height:300px;}
+#image_area .image_image{text-align:center;}
+#image_area .image_image img{max-width:300px;max-height:300px;}
+
+/**图片剪切**/
+.imgareaselect-border1 {background: url(../images/border-v.gif) repeat-y left top;}
+.imgareaselect-border2 {background: url(../images/border-h.gif) repeat-x left top;}
+.imgareaselect-border3 {background: url(../images/border-v.gif) repeat-y right top;}
+.imgareaselect-border4 {background: url(../images/border-h.gif) repeat-x left bottom;}
+.imgareaselect-border1, .imgareaselect-border2, .imgareaselect-border3, .imgareaselect-border4 {filter: alpha(opacity=50);opacity: 0.5;}
+.imgareaselect-handle {background-color: #fff;border: solid 1px #000;filter: alpha(opacity=50);opacity: 0.5;}
+.imgareaselect-outer {background-color: #000;filter: alpha(opacity=50);opacity: 0.5;}
+.imgareaselect-selection {}
+
+/**拖动*/
+.resume_drag:hover,.resume_drag:focus,.resume_drag:checked,.resume_drag:active{box-shadow:0 0 8px rgba(150,150,150,.8);}
+.resume_drag{position:absolute;z-index:10000;top:50px;left:40%;}
+.resume_drag .textarea{width: 500px;height:200px;} 
+.resume_drag span{background:url(../images/zxbjSp.png);position:absolute;width:24px;height:24px;display:none;background-color:rgba(141, 165, 252,.5);}
+.resume_drag span.resume_drag_move{background-position:5px -624px;cursor:move;top:0;left:-24px;}
+.resume_drag span.resume_drag_delete{background-position:-96px -625px;cursor:pointer;top:24px;left:-24px;}
+.resume_drag span:hover{background-color:rgba(141, 165, 252,1);}
+.resume_drag:hover span{display:block;}
+
+/** 图片 */
+.resume_image img{display:block;}
+.resume_image_radius img{border-radius:50%;}
+.resume_textarea div.textarea{display:block;background:none;border:none;}
+
+/**z-index*/
+header{z-index:20001;}
+.baseditBar{z-index:20000;}
+.modal{z-index:50000;}
+.modal-backdrop.in{z-index:49999;}
+.table{position:absolute;padding:10px;width:222px;height:222px;border:1px solid #ccc;background:#fff;overflow:hidden;max-width:222px;}
+.table span{width:10px;height:10px;display:block;float:left;background:#f0f0f0;margin:5px;cursor:pointer;}
+table{width:100%;}
+table td{border:1px solid #ddd;line-height:33px;height:33px;padding:2px; width:auto;}
+/************************************** 编辑样式 ************************************/
+
+/*浏览器提示*/
+.browserPrompt{width:100%;height:60px;background:rgba(41,41,41,0.8);position:fixed;top:0px;right:0px;z-index:70000;text-align:center;display:none;}
+.browserPrompt .close{opacity:0.8;width:23px;height:23px;display:block;z-index:70001;position:absolute;top:5px;right:5px;cursor:pointer;background:url(../images/close.png) no-repeat;}
+.browserPrompt .close:hover{opacity:1;}
+.browserPrompt .text{font-size: 14px;color:#fff;position:absolute;top:16px;height:28px;right:0;left:0;margin:auto;}
+.browserPrompt .text span{color:#ff834c;}
+.browserPrompt .text .download{width:74px;height:28px;color:#fff;background:#e84b44;display: inline-block;line-height:28px;text-align: center;border-radius:3px;margin-left:10px;transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;}
+.browserPrompt .text .download:hover{color:#fff;background:#eb6862;}
+
+#pages{float:left;width:100%;padding:15px 0;text-align:center;}
+#pages a {background:#f1f1f1;color:#a9a9a9;font-family:Arial;height:36px;margin-right:5px;text-align:center;transition:background-color 0.2s ease-out 0s;padding:10px 14px;position:relative;}
+#pages a#pageactive {background:#ff6000;color:#fff;cursor:default;}
+#pages a.pageactive {background:#ff6000;color:#fff;cursor:default;}
+#pages a:hover {background:#969696;color:#fff;}
+
+header{width:100%;height: 60px;background:#464e78;position:fixed;top:0px;}
+.headInner{width:98%;margin:0 auto;height:100%;}
+.headInner .logo{width:260px;height:30px;padding:15px 0;float: left;}
+.headInner .nav{float: left;margin:15px 0 0 0;}
+.headInner .nav.open .btn{background:#fff;background:url(../images/zxbjSp.png) no-repeat;background-position:-76px -1159px;}
+.headInner .nav .btn{width:32px;height:29px;background:url(../images/zxbjSp.png) no-repeat;background-position:-1px -1159px;display: block;}
+.headInner .nav .dropdown-menu{width:292px;height:223px;border:none;top: 43px;padding:15px;}
+.headInner .nav .dropdown-menu li{width:50%;float:left;}
+.headInner .nav .dropdown-menu li h2{border-bottom:1px solid #dcdcdc;padding-bottom:10px;margin-bottom:20px;}
+.headInner .nav .dropdown-menu li h2 a{font-size:16px;color:#000;}
+.headInner .nav .dropdown-menu li p a{font-size:12px;color:#ababab;line-height: 24px;}
+.headInner .nav .dropdown-menu li.resume{padding-left:0px;}
+.headInner .nav .dropdown-menu li.ppt h2,.headInner .nav .dropdown-menu li.ppt p{padding-left:20px;}
+.headInner .nav .dropdown-menu a:hover{color:#FD8655;}
+.headInner .nav .caret{position: absolute;top: -9px;left:5px;border-top:none;display: inline-block;width: 0;height: 0;margin-left: 2px;vertical-align: middle;border-bottom: 9px solid #fff;border-right: 8px solid rgba(247, 247, 247, 0);border-left: 8px solid transparent;}
+.headInner .userInfo{float: right;margin-left:35px;}
+.headInner .userInfo .userImg{width:40px;height: 40px;border-radius:40px;border:2px solid rgba(255,255,255,0.1);overflow: hidden;margin-top:8px;}
+.headInner .userInfo .userImg img{width:40px;height: 40px;border-radius:40px;display: block;}
+.headInner .otherNav{float: right;padding-top:15px;}
+.headInner .otherNav ul li{float: left;margin-right:15px;}
+.headInner .otherNav ul li a{float: left;width:95px;height:30px;border-radius:5px;background-color:#596397;line-height:30px;color:#373e65;font-size:12px;padding-left:35px;display: block;}
+.headInner .otherNav ul li a:hover{background-color:#8A9BF4;}
+.headInner .otherNav ul li a.web{background-position:10px 5px;}
+.headInner .otherNav ul li a.mobile{background-position:10px -36px;}
+
+.baseditBar{width:100%;position:fixed;top:60px;}
+.baseditBar .navBar{width:100%;height:39px;background:#f1f1f1;margin-left:30px;}
+.baseditBar .navBar ul{padding-left:9px;}
+.baseditBar .navBar ul li{float: left;font-size:12px;}
+.baseditBar .navBar ul li a{width:85px;line-height:30px;color:#383838;display: block;margin-top:9px;text-align:center;position:relative;z-index:100;}
+.baseditBar .navBar ul li.current{}
+.baseditBar .navBar ul li.current a{color:#fd8655;background:url(../images/navBar_abg.png) no-repeat center 0px;}
+
+.baseditBar .mainBar{width:100%;padding: 12px 12px 0 12px;background:#fff;box-shadow: 0px 2px 5px rgba(0,0,0,0.1);padding-left:30px;margin-top: -1px;border-top:1px solid #e8e8e8;}
+.baseditBar .mainBar .editBox{border:1px solid #ebebeb;border-radius:4px;padding:9px 9px 0px 9px;display: inline-block;margin-right:10px;float: left;min-height:40px;margin-bottom:12px;}
+.baseditBar .mainBar .edBtn{margin-right:10px;cursor: pointer;display: inline-block;}
+.baseditBar .mainBar .edBtn:last-child{margin-right:0px;}
+.baseditBar .mainBar .edtitleBox{border-right:1px solid #EBEBEB;padding-right:10px;margin-right:10px;margin-top: 3px;line-height:14px;float: left;color:#7C7C7C;}
+
+.baseditBar .baseBar{display:none;height:52px;}
+.baseditBar .mobanBar{display: block;}
+
+.baseditBar .fixBar{width:128px;height:95px;position: absolute;background:#F7F7F7;border:1px solid #dcdcdc;padding:0 15px;}
+.baseditBar .fixBar .editBox{padding-top:13px;}
+.baseditBar .fixBar .edBtn{display:block;cursor:pointer;width:20px;width:20px;margin:5px 12px;float:left;}
+
+/*保存导出模板*/
+.baseditBar .mobanBar .saveBtn{width:22px;height:20px;background-position:2px -90px;margin-bottom:12px;}
+.baseditBar .mobanBar .importBtn{width:20px;height:20px;background-position: -56px -90px;}
+.baseditBar .mobanBar .impdfBtn{width:24px;height:20px;background-position: -115px -90px;margin-bottom:12px;}
+.baseditBar .mobanBar .prevBtn{width:16px;height:20px;background-position:-173px -92px;margin-right: 5px;}
+.baseditBar .mobanBar .nextBtn{width:16px;height:20px;background-position:-198px -92px;}
+
+/*语言选择*/
+.baseditBar .mobanBar .editBox .langBtn{height:20px;background-position: 0px -90px;padding-left:22px;}
+.baseditBar .mobanBar .editBox .langBox{}
+.baseditBar .mobanBar .editBox .langBox span{background-position:0px -127px;width:15px;height:14px;float: left;margin-right:5px;}
+.baseditBar .mobanBar .editBox .langFrom{float: left;}
+.baseditBar .mobanBar .editBox .langFrom label{margin-right:10px;padding-top: 2px;}
+.baseditBar .mobanBar .editBox .langFrom label input{float: left;}
+
+/*内容模块*/
+.baseditBar .mobanBar .editBox .nrmkBox span{background-position:-88px -127px;width:16px;height:14px;float: left;margin-right:5px;}
+.baseditBar .mobanBar .editBox .nrmkBtn{float: left;padding-top: 2px;position: relative;}
+.baseditBar .mobanBar .editBox .nrmkBtn .more{width:22px;height:38px;border-left:1px solid #ebebeb;border-right:1px solid #ebebeb;float: left;margin-top: -11px;background-position: -292px -119px;cursor: pointer;}
+.baseditBar .mobanBar .editBox .nrmkList{overflow:hidden;float: left;}
+.baseditBar .mobanBar .editBox .nrmkList li{float: left;margin-right:20px;font-size:12px;}
+.baseditBar .mobanBar .editBox .nrmkList li span{width:16px;height:16px;float: left;background-position: -155px -125px;display: inline-block;margin-right:7px;}
+.baseditBar .mobanBar .editBox .nrmkList li span.checked{background-position: -120px -125px;}
+.baseditBar .mobanBar .editBox .addBtn{width:113px;height:36px;background:#f6f6f6;float: left;margin:-10px -8px 0 1px;line-height: 36px;color:#fd8655;cursor: pointer;}
+.baseditBar .mobanBar .editBox .addBtn span{width:18px;height:100%;float: left;background-position: -235px -116px;margin:0 8px 0 14px;}
+.baseditBar .mobanBar .editBox .otherList{position: absolute;top: 29px;background: #fff;padding: 6px 0 0 10px;left: -11px;width: 558px;border-bottom: 1px solid #ececec;border-left: 1px solid #ececec;border-right: 1px solid #ececec;}
+.baseditBar .mobanBar .editBox .otherList .nrmkList li{margin-bottom:15px;}
+.baseditBar .mobanBar .editBox .nrmkBtn .dropdown{float:left;}
+.baseditBar .mobanBar .editBox .nrmkBtn .dropdown-menu{border-top:none;box-shadow:none;border-radius:0px;top: 25px;left: -557px;}
+
+/*模板主题颜色选择*/
+.baseditBar .mobanBar .editBox .themecolorBox{border-right:none;}
+.baseditBar .mobanBar .editBox .themecolorBox span{background-position:0px -165px;width:16px;height:15px;float: left;margin-right:5px;}
+.baseditBar .mobanBar .editBox .coselectBtn{float: left;position:relative;}
+.baseditBar .mobanBar .editBox .coselectBtn ul li{float:left;width:20px;height:20px;background:transparent;border-radius:2px;margin-left:12px;cursor: pointer;border:2px solid transparent;}
+.baseditBar .mobanBar .editBox .coselectBtn ul li:hover{border:2px solid #9DA4C7;}
+.baseditBar .mobanBar .editBox .coselectBtn ul li.current{border:2px solid #9DA4C7;background-image:url(../images/selec_ico_03.png) !important;background-position:8px 8px !important;background-repeat:no-repeat !important;}
+.baseditBar .mobanBar .editBox .coselectBtn .more{width:22px;height:38px;border-left:1px solid #ebebeb;/* border-right:1px solid #ebebeb; */background-position: -292px -119px;cursor: pointer;position: absolute;right: -10px;top: -9px;}
+.baseditBar .mobanBar .editBox .coselectBtn .dropdown-menu{top:41px;left: -99px;border-radius: 0px;min-width: 130px;border-color: #EBEBEB;width: 130px;}
+.baseditBar .mobanBar .editBox .coselectBtn .dropdown-menu ul{margin-left:10px;}
+.baseditBar .mobanBar .editBox .coselectBtn .dropdown-menu ul li{margin-bottom:10px;}
+
+/*字体编辑*/
+.baseditBar .editBar .editBox .edBtn{float: left;}
+.baseditBar .editBar .editBox .edBtn.selected{background-color:#F0F0F0;}
+.baseditBar .editBar .editBox .fontstyBox{line-height:22px;margin-top:0px;}
+.baseditBar .editBar .editBox .fontstyBox span{background-position: -36px -161px;width:23px;height:20px;float: left;margin-right:5px;}
+.baseditBar .editBar .editBox .ffamSelect,.baseditBar .editBar .editBox .fsizeSelect{float: left;position: relative;margin-right:10px;}
+.baseditBar .editBar .editBox .ffamSelect select,.baseditBar .editBar .editBox .fsizeSelect select{border:1px solid #c8cede;padding:1px 5px;}
+.baseditBar .editBar .editBox .a_fontdown{border:1px solid #c8cede;height:22px;line-height:21px;background:none;padding:0 5px;position:relative;}
+.baseditBar .editBar .editBox .a_fontdown:hover{background-color:#e9efff;}
+.baseditBar .editBar .editBox .a_fontdown a{color:#3b3b3b;}
+.baseditBar .editBar .editBox .a_fontdown .dropdown-menu{text-align: center;top: 26px;left: -29px;min-width:112px;}
+.baseditBar .editBar .editBox .fbigBtn{width:20px;height:20px;background-position: 1px -220px;}
+.baseditBar .editBar .editBox .fsmallBtn{width:20px;height:20px;background-position:-23px -220px;}
+.baseditBar .editBar .editBox .fstrongBtn{width:20px;height:20px;background-position: -47px -219px;}
+.baseditBar .editBar .editBox .fitalicBtn{width:20px;height:20px;background-position: -70px -219px;}
+.baseditBar .editBar .editBox .funlineBtn{width:20px;height:20px;background-position: -92px -219px;}
+.baseditBar .editBar .editBox .fcolorBtn{width:22px;height:20px;background-position: -117px -220px;position: relative;}
+.baseditBar .editBar .editBox .fcolorBtn input[type="color"]{opacity:0;position:absolute;width:100%;height:100%;z-index:100;padding:0;border:0;display:block;}
+.baseditBar .editBar .editBox .fcolorBtn p{position:absolute;border-bottom-style:solid;border-bottom-width:2px;width: 55%;bottom: 2px;}
+.baseditBar .editBar .editBox .fcolorBtn #colorSelector{width:22px;height:25px;}
+.baseditBar .editBar .editBox .fcolorBtn .colorSelector{position:absolute;top:16px;width:12px;height:2px;}
+.baseditBar .editBar .editBox .fclearBtn{width:86px;height:20px;line-height: 18px;background-position:8px -248px;border:1px solid #c8cede;background-color:#e9efff;padding-left:29px;float: left;}
+.baseditBar .editBar .editBox .fformatBtn{width:76px;height:20px;background-position:8px -269px;border:1px solid #c8cede;background-color:#fff;line-height: 18px;padding-left:29px;float: left;}
+
+/*段落编辑*/
+.baseditBar .editBar .editBox .paragraphBox{line-height:22px;margin-top:0px;}
+.baseditBar .editBar .editBox .paragraphBox span{background-position: 0px -294px;width: 30px;height:20px;float: left;margin-right:5px;}
+.baseditBar .editBar .paragraphbox .edBtn:hover{background-color:#b8c9e9;}
+.baseditBar .editBar .paragraphbox .edBtn.selected{background-color:#b8c9e9;}
+.baseditBar .editBar .editBox .graleftBtn{width:20px;height:20px;background-position: -49px -295px;}
+.baseditBar .editBar .editBox .gracenterBtn{width:20px;height:20px;background-position: -77px -295px;}
+.baseditBar .editBar .editBox .grarightBtn{width:20px;height:20px;background-position: -104px -295px;}
+.baseditBar .editBar .editBox .graulBtn{width:30px;height:20px;background-position: -135px -296px;}
+.baseditBar .editBar .editBox .graolBtn{width:30px;height:20px;background-position: -180px -296px;}
+.baseditBar .insertBar .editBox{padding-top: 10px;}
+.baseditBar .insertBar .editBox .edBtn{padding-left:23px;height:18px;}
+.baseditBar .insertBar .editBox .inpicBtn{background-position: 0px -338px;}
+.baseditBar .insertBar .editBox .chpicBtn{background-position: -110px -338px;}
+.baseditBar .insertBar .editBox .repicBtn{background-position: -219px -337px;}
+.baseditBar .insertBar .editBox .intextBtn{background-position:-344px -337px;}
+.baseditBar .textBar .editBox .picborBox span{background-position:-343px -388px;width:17px;height:17px;float: left;margin-right:5px;}
+.baseditBar .textBar .editBox .picborList{float: left;margin-top: -5px;}
+.baseditBar .textBar .editBox .picborList .borbtn{float: left;width:30px;height:30px;margin:0 8px;cursor: pointer;position: relative;}
+.baseditBar .textBar .editBox .picborList .borcolor{background-position: 4px -440px;position: relative;}
+.baseditBar .textBar .editBox .picborList .borcolor input{opacity:0;cursor: pointer;}
+.baseditBar .textBar .editBox .picborList .borcolor p{position: absolute;border-bottom-style: solid;border-bottom-width: 2px;width: 50%;bottom: 8px;left: 3px;}
+.baseditBar .textBar .editBox .picborList .borsize{background-position:-35px -440px;}
+.baseditBar .textBar .editBox .picborList .borsize .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .textBar .editBox .picborList .borstyle{background-position:-75px -440px;}
+.baseditBar .textBar .editBox .picborList .borsizelist{width:137px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position:relative;top:33px;left:-67px;z-index:999;}
+.baseditBar .textBar .editBox .picborList .borsizelist span{width:70px;background:#000;display:inline-block;margin:0 10px;}
+.baseditBar .textBar .editBox .picborList .borsizelist div{padding: 5px 2px;font-size:12px;color:#5e5e5e;}
+.baseditBar .textBar .editBox .picborList .borsizelist div i{text-align: right;width:40px;display:inline-block;font-style: normal;}
+.baseditBar .textBar .editBox .picborList .borsizelist div:hover{background:#dee5f8;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-0-5{height:0.5pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-1{height:1pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-1-5{height:1.5pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-2{height:2pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-2-5{height:2.5pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-3{height:3pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-3-5{height:3.5pt;}
+.baseditBar .textBar .editBox .picborList .borsizelist span.height-4{height:4pt;}
+.baseditBar .textBar .editBox .picborList .borstyle .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .textBar .editBox .picborList .borstylelist{width:90px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position: absolute;top:33px;left:-66px;z-index:999;}
+.baseditBar .textBar .editBox .picborList .borstylelist span{width:70px;display:inline-block;margin:0 10px;height:3px;}
+.baseditBar .textBar .editBox .picborList .borstylelist div{padding: 5px 22px;font-size:12px;color:#5e5e5e;}
+.baseditBar .textBar .editBox .picborList .borstylelist div:hover{background:#dee5f8;}
+.baseditBar .textBar .editBox .picborList .borstylelist span.solid{border-bottom:1px solid #000;}
+.baseditBar .textBar .editBox .picborList .borstylelist span.dashed{border-bottom:1px dashed #000;}
+.baseditBar .textBar .editBox .picborList .borstylelist span.dotted{border-bottom:1px dotted #000;}
+.baseditBar .textBar .editBox .picborList .borstylelist i{font-style:normal;}
+.baseditBar .textBar .editBox .picsizeBox span{background-position: 0px -503px;width:23px;height:21px;float: left;margin-right:5px;margin-top: -4px;}
+.baseditBar .textBar .editBox .picsizeList{float: left;}
+.baseditBar .textBar .editBox .picsizeList ul li{float: left;}
+.baseditBar .textBar .editBox .picsizeList ul li label{margin-top:-10px;}
+.baseditBar .textBar .editBox .picsizeList ul li input{margin:0 10px;border:1px solid #c8cede;color:#616b88;height:24px;width:80px;text-align: center;}
+.baseditBar .picBar .editBox{padding-top: 10px;}
+.baseditBar .picBar .editBox .edBtn{padding-left:23px;height:18px;}
+.baseditBar .picBar .editBox .chpicBtn{background-position: -110px -338px;}
+.baseditBar .picBar .editBox .picstyBox span{background-position: -118px -390px;width:17px;height:17px;float: left;margin-right:5px;}
+.baseditBar .picBar .editBox .picstyList{float: left;margin-top: -5px;}
+.baseditBar .picBar .editBox .picstyList ul li{float: left;width:30px;height:30px;margin:0 5px;cursor: pointer;}
+.baseditBar .picBar .editBox .picstyList ul li:hover{opacity: 0.8;}
+.baseditBar .picBar .editBox .picstyList ul li.round{background-position: -180px -381px;}
+.baseditBar .picBar .editBox .picstyList ul li.rectangle{background-position: -231px -381px;}
+.baseditBar .picBar .editBox .picstyList ul li.sixangle{background-position: -281px -381px;}
+.baseditBar .picBar .editBox .picborBox span{background-position:-343px -388px;width:17px;height:17px;float: left;margin-right:5px;}
+.baseditBar .picBar .editBox .picborList{float: left;margin-top: -5px;}
+.baseditBar .picBar .editBox .picborList .borbtn{float: left;width:30px;height:30px;margin:0 8px;cursor: pointer;position: relative;}
+.baseditBar .picBar .editBox .picborList .borcolor{background-position: 4px -440px;position: relative;}
+.baseditBar .picBar .editBox .picborList .borcolor input{opacity:0;cursor: pointer;}
+.baseditBar .picBar .editBox .picborList .borcolor p{position: absolute;border-bottom-style: solid;border-bottom-width: 2px;width: 50%;bottom: 8px;left: 3px;}
+.baseditBar .picBar .editBox .picborList .borsize{background-position:-35px -440px;}
+.baseditBar .picBar .editBox .picborList .borsize .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .picBar .editBox .picborList .borstyle{background-position:-75px -440px;}
+.baseditBar .picBar .editBox .picborList .borsizelist{width:137px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position:relative;top:33px;left:-67px;z-index:999;}
+.baseditBar .picBar .editBox .picborList .borsizelist span{width:70px;background:#000;display:inline-block;margin:0 10px;}
+.baseditBar .picBar .editBox .picborList .borsizelist div{padding: 5px 2px;font-size:12px;color:#5e5e5e;}
+.baseditBar .picBar .editBox .picborList .borsizelist div i{text-align: right;width:40px;display:inline-block;font-style: normal;}
+.baseditBar .picBar .editBox .picborList .borsizelist div:hover{background:#dee5f8;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-0-5{height:0.5pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-1{height:1pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-1-5{height:1.5pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-2{height:2pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-2-5{height:2.5pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-3{height:3pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-3-5{height:3.5pt;}
+.baseditBar .picBar .editBox .picborList .borsizelist span.height-4{height:4pt;}
+.baseditBar .picBar .editBox .picborList .borstyle .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .picBar .editBox .picborList .borstylelist{width:90px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position: absolute;top:33px;left:-66px;z-index:999;}
+.baseditBar .picBar .editBox .picborList .borstylelist span{width:70px;display:inline-block;margin:0 10px;height:3px;}
+.baseditBar .picBar .editBox .picborList .borstylelist div{padding: 5px 22px;font-size:12px;color:#5e5e5e;}
+.baseditBar .picBar .editBox .picborList .borstylelist div:hover{background:#dee5f8;}
+.baseditBar .picBar .editBox .picborList .borstylelist span.solid{border-bottom:1px solid #000;}
+.baseditBar .picBar .editBox .picborList .borstylelist span.dashed{border-bottom:1px dashed #000;}
+.baseditBar .picBar .editBox .picborList .borstylelist span.dotted{border-bottom:1px dotted #000;}
+.baseditBar .picBar .editBox .picborList .borstylelist i{font-style:normal;}
+.baseditBar .picBar .editBox .picsizeBox span{background-position: 0px -503px;width:23px;height:21px;float: left;margin-right:5px;margin-top: -4px;}
+.baseditBar .picBar .editBox .picsizeList{float: left;}
+.baseditBar .picBar .editBox .picsizeList ul li{float: left;}
+.baseditBar .picBar .editBox .picsizeList ul li label{margin-top:-10px;}
+.baseditBar .picBar .editBox .picsizeList ul li input{margin:0 10px;border:1px solid #c8cede;color:#616b88;height:24px;width:80px;text-align: center;}
+.baseditBar .iconBar .editBox{padding-top: 10px;}
+.baseditBar .iconBar .editBox .edBtn{padding-left:23px;height:18px;}
+.baseditBar .iconBar .editBox .chiconBtn{background-position:-474px -337px;}
+.baseditBar .iconBar .editBox .picsizeBox span{background-position: 0px -503px;width:23px;height:21px;float: left;margin-right:5px;margin-top: -4px;}
+.baseditBar .iconBar .editBox .picsizeList{float: left;}
+.baseditBar .iconBar .editBox .picsizeList ul li{float: left;}
+.baseditBar .iconBar .editBox .picsizeList ul li label{margin-top:-10px;}
+.baseditBar .iconBar .editBox .picsizeList ul li input{margin:0 10px;border:1px solid #c8cede;color:#616b88;height:24px;width:80px;text-align: center;}
+.baseditBar .borderBar .editBox{padding-top: 10px;}
+.baseditBar .borderBar .editBox .edBtn{padding-left:23px;height:18px;}
+.baseditBar .borderBar .editBox .borderBox span{background-position:-343px -388px;width:17px;height:17px;float: left;margin-right:5px;}
+.baseditBar .borderBar .editBox .borderList{float: left;margin-top: -5px;}
+.baseditBar .borderBar .editBox .borderList .borsize,.baseditBar .borderBar .editBox .borderList .borstyle{float: left;width:30px;height:30px;margin:0 8px;cursor: pointer;position: relative;}
+.baseditBar .borderBar .editBox .borderList .borcolor{background-position: 4px -440px;position: relative;}
+.baseditBar .borderBar .editBox .borderList .borcolor #colorSelector2{position: absolute;left:0px;top:2px;width:20px;height:30px;}
+.baseditBar .borderBar .editBox .borderList .borcolor .colorSelector2{position:absolute;top:20px;width:20px;height:3px;left:3px;}
+.baseditBar .borderBar .editBox .borderList .borsize{background-position:-35px -440px;}
+.baseditBar .borderBar .editBox .borderList .borsize .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .borderBar .editBox .borderList .borstyle{background-position:-75px -440px;}
+.baseditBar .borderBar .editBox .borderList .borsizelist{width:137px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position:relative;top:33px;left:-55px;z-index:999;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span{width:70px;background:#000;display:inline-block;margin:0 10px;}
+.baseditBar .borderBar .editBox .borderList .borsizelist li{padding: 5px 2px;font-size:12px;color:#5e5e5e;}
+.baseditBar .borderBar .editBox .borderList .borsizelist li i{text-align: right;width:40px;display:inline-block;font-style:normal;}
+.baseditBar .borderBar .editBox .borderList .borsizelist li:hover{background:#dee5f8;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-0-5{height:0.5pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-1{height:1pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-1-5{height:1.5pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-2{height:2pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-2-5{height:2.5pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-3{height:3pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-3-5{height:3.5pt;}
+.baseditBar .borderBar .editBox .borderList .borsizelist span.height-4{height:4pt;}
+.baseditBar .borderBar .editBox .borderList .borstyle .btn_{position:absolute;width:30px;height:30px;top:0px;left:0px;background:transparent;}
+.baseditBar .borderBar .editBox .borderList .borstylelist{width:90px;padding:20px 0;border:1px solid rgba(0,0,0,0.11);box-shadow:0 0 2px rgba(0,0,0,0.15);background:#fff;position: absolute;top:33px;left:-30px;z-index:999;}
+.baseditBar .borderBar .editBox .borderList .borstylelist span{width:70px;display:inline-block;margin:0 10px;height:3px;}
+.baseditBar .borderBar .editBox .borderList .borstylelist li{padding: 5px 0px;font-size:12px;color:#5e5e5e;}
+.baseditBar .borderBar .editBox .borderList .borstylelist li i{text-align: right;width:40px;display:inline-block;font-style:normal;}
+.baseditBar .borderBar .editBox .borderList .borstylelist li:hover{background:#dee5f8;}
+.baseditBar .borderBar .editBox .borderList .borstylelist span.solid{border-bottom:1px solid #000;}
+.baseditBar .borderBar .editBox .borderList .borstylelist span.dashed{border-bottom:1px dashed #000;}
+.baseditBar .borderBar .editBox .borderList .borstylelist span.dotted{border-bottom:1px dotted #000;}
+.baseditBar .borderBar .editBox .bordersizeBox span{background-position: 0px -503px;width:23px;height:21px;float: left;margin-right:5px;margin-top: -4px;}
+.baseditBar .borderBar .editBox .bordersizeList{float: left;}
+.baseditBar .borderBar .picWidth{width:102px;}
+
+/*图标库*/
+.iconModal{width:666px;height:468px;border-radius:26px;}
+.modal-content{border:none;box-shadow:none;}
+.modal-content h4{font-size:18px;font-weight:lighter;}
+.modal-header{background:#6983e4;border-top-left-radius:20px;border-top-right-radius:20px;}
+.modal-header .modal-title{color:#fff;font-weight:lighter;}
+.modal-header .close{width:17px;height:auto;border-radius:15px;opacity:1;text-shadow:none;}
+.modal-header .close span{color: #4c63b7;margin-top: -2px;display: block;font-size: 26px;font-weight: lighter;background: ;}
+.modal-header .close span:hover{transform:rotate(360deg);transition:all .5s;}
+.iconModal .iconmodalNav{margin-top:20px;}
+.iconModal .iconmodalNav ul li{text-align: center;float: left;margin-right: 10px;height:30px;}
+.iconModal .iconmodalNav ul li a.current{background:url(../images/iconModalbg_03.png) no-repeat center 23px;height:30px;display: block;}
+.iconModal .iconmodalNav ul li:last-child{border-bottom:none;}
+.iconModal .iconmodalNav ul li a{color:#5f5f5f;line-height: 22px;}
+.iconModal .iconmodalNav .dropdown{float: left;}
+.iconModal .iconmodalNav .dropdown-menu{min-width:90px;}
+.iconModal .iconmodalNav ul li a:hover,.iconModal .iconmodalNav ul li a.current{color:#FD8655;}
+.iconModal .iconmodalCon{margin-top:-17px;height:260px;padding:0 15px;float:left;width: 100%;}
+.iconModal .iconmodalCon ul{border:1px solid #d3dbf8;overflow-y:auto;height:260px;background-color: #f7f9ff;padding-top: 11px;padding-left:8px;}
+.iconModal .iconmodalCon ul li{width:57px;height:57px;border:1px solid transparent;float: left;margin-left: -1px;cursor:pointer;padding-top:2px;}
+.iconModal .iconmodalCon ul li:hover{background:#6983e4;}
+.iconModal .iconmodalCon ul li:hover .icon, .iconModal .iconmodalCon ul li:hover p{color:#fff;}
+.iconModal .iconmodalCon ul li .icon{text-align: center;font-size:36px;display: block;color:#636363;}
+.iconModal .iconmodalCon ul li p{display:none;text-align: center;color:#a5a5a5;margin-top:10px;font-size:12px;width:63px;padding:0 6px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+.iconModal .modal-footer{padding:10px;text-align: center;border:none;margin-top: 7px;}
+.iconModal .modal-footer button{border:1px solid #d9d9d9;color:#5f5f5f;background:#f9f9f9;font-size:12px;padding:6px 12px;margin-top: 18px;}
+.picModal{width:825px;height:515px;border-radius:26px;}
+.picModal .picUpload {width:401px;height:380px;background:#F0F0F0 url(../images/uploadbg.png) no-repeat center 60px;}
+.picModal .picUpload .uploadBtn{margin-top:155px;text-align: center}
+.picModal .picUpload .uploadbtn{padding:6px 24px;text-align: center;display:inline-block;}
+.picModal .picUpload P{text-align: center;color:#ee3131;margin-top:25px;}
+.picModal .picPreview{width:325px;height:380px;background:#f0f0f0;}
+.picModal .picPreview p{color:#4D4D4D;text-align: center;margin:25px 0 20px 0;}
+.picModal .picPreview .viewImg{width:120px;height:160px;border:1px solid #d8d8d8;background:#fff;margin:0 auto;overflow:hidden;}
+.picModal .modal-footer{text-align: center;border:none;padding:0px;}
+.picModal .modal-footer button{color:#fff;background:#FD8655;font-size:12px;padding:6px 22px;margin-top: 15px;}
+.textModal{width:670px;height:400px;border-radius:26px;}
+.textModal .modal-body label textarea{width:638px;height:175px;margin:0 auto;border:1px solid #d1d1d1;margin:5px 0 18px 0;}
+.textModal .modal-body{height:282px;}
+.textModal .modal-body p{color:#979797;}
+.textModal .modal-footer{text-align: center;border:none;padding:12px;}
+.textModal .modal-footer button{color:#fff;background:#FD8655;font-size:12px;padding:6px 33px;}
+.nrmkModal{width:670px;height:545px;border-radius:26px;}
+.nrmkModal .modal-body{height:422px;}
+.nrmkModal .modal-body dl{color:#96a5df;}
+.nrmkModal .modal-body dl dt{margin-bottom:10px;}
+.nrmkModal .modal-body dl dd{padding:30px 10px;background:#f4f6fe;}
+.nrmkModal .modal-body dl dd input{border:1px solid #d8dff9;padding-left:5px;height:30px;}
+.nrmkModal .modal-body dl dd .mkTitle{margin-bottom:15px;}
+.nrmkModal .modal-body dl dd .mkTitle input{width:558px;}
+.nrmkModal .modal-body dl dd div span{margin-right:14px;}
+.nrmkModal .modal-footer{text-align: center;border:none;padding:24px;}
+.nrmkModal .modal-body dl dd .mkText textarea{width:556px;height:130px;border:1px solid #e3e5ec;float:right;padding-left:5px;}
+.nrmkModal .modal-footer button{color:#fff;background:#FD8655;font-size:12px;padding:6px 33px;}
+.nrmkModal .modal-footer button:nth-child(2){background:#EDEDED;}
+.nrmkModal .modal-footer button:nth-child(2):hover{background:#C7C7C7;}
+.mbModal{width:475px;height:286px;border-radius:26px;}
+.mbModal .modal-body{height:145px;padding:25px 15px 0 15px;}
+.mbModal .modal-body P{color:#545B81;border-bottom:1PX solid #EDEDED;padding-bottom:5px;margin-bottom:15px;}
+.mbModal .modal-footer{text-align: center;border:none;padding:12px;}
+.mbModal .modal-footer p{margin-bottom:10px;color:#F03E3E;}
+.mbModal .modal-footer button{color:#fff;background:#FD8655;font-size:12px;padding:6px 33px;}
+.promptModal{width:660px;padding-bottom:10px;border-radius:24px;}
+.promptModal h4{font-size:18px;font-weight:lighter;}
+.promptModal h2{font-size:16px;color:#3b3b3b;margin-bottom:5px;}
+.promptModal h2 span{display: inline-block;width:8px;height:8px;background:#FD8655;margin-right:5px;}
+.promptModal p{color:#747474}
+.promptModal .modal-body{overflow-y:auto;height:418px;}
+.promptModal .modal-footer{text-align: center;}
+.promptModal .modal-footer .btn{border:none;background:#FD8655;color:#fff;}
+.suggestsModal{border-radius:24px;}
+.suggestsModal label{display: block;margin-bottom:20px;}
+.suggestsModal label input{height:30px;}
+.suggestsModal label input:focus,.suggestsModal label textarea:focus{border-color:#FD8655;}
+.suggestsModal label input,.suggestsModal label textarea{border:1px solid #e1e6fa;border-radius:3px;padding:5px;margin-left:5px;}
+.suggestsModal label.mbname input{width:200px;}
+.suggestsModal label.qudisc textarea{width:510px;height:140px;vertical-align:top;}
+.suggestsModal label.contact input{width:510px;}
+.suggestsModal .modal-footer{text-align:left;border:none;padding: 0px 0px 20px 70px;border-radius:3px;}
+.suggestsModal .modal-footer button{color:#fff;background:#FD8655;font-size:12px;padding:6px 40px;margin-top: -15px;}
+
+/*删除提示框*/
+.myModaldel{background:rgba(0,0,0,.3);}
+.myModaldel .modal-dialog{width:400px;height:245px;border-radius:5px;background:#fff;position: ABSOLUTE;top: 50%;margin-top: -122px;left: 50%;margin-left: -200px;border:4px solid rgba(105,131,228,.4);background-clip: padding-box;-moz-background-clip: padding-box;-webkit-background-clip: padding-box;}
+.myModaldel .modal-dialog .close{right:5px;position: absolute;color: #B7B7B7;opacity: 1;font-size:24px;}
+.myModaldel .modal-dialog .icon{width:53px;height:56px;margin:20px auto 40px auto;background: url(../images/zxbjSp.png) no-repeat 0px -1241px;display: block;}
+.myModaldel .modal-dialog p{font-size:18px;text-align: center;color:#444;margin-bottom:35px;}
+.myModaldel .modal-dialog .delbtn{display: block;text-align: center;}
+.myModaldel .modal-dialog .delbtn a{border:none;line-height:30px;padding:0 20px;background:#FD8655;border-radius:5px;color:#fff;display: inline-block;}
+.myModaldel .modal-dialog .delbtn a:hover,.myModaldel .modal-dialog .delbtn button:active,.myModaldel .modal-dialog .delbtn button:checked{opacity:.9;}
+.myModaldel .modal-dialog .delbtn a.reset{background:#e2e2e2;margin-left:24px;}
+
+/*小贴士提示框*/
+.tipsModal{position:fixed;left:-200px;width:200px;height:430px;top:50%;margin-top:-215px;z-index:60000;box-shadow: 4px 3px 10px rgba(0,0,0,0.1);border-top-right-radius: 8px;}
+.tipsModal .modal-content{border-top-left-radius:24px;border-top-right-radius:24px;height:430px;}
+.tipsModal .modal-content .modal-header{border-top-left-radius: 8px;border-top-right-radius:8px;}
+.tipsModal .modal-content .modal-header .close{width:18px;height:18px;background:url(../images/tips_close_03.png) no-repeat;margin-left: -6px;float:right;}
+.tipsModal .modal-content h4{font-size:14px;}
+.tipsModal .modal-content .modal-body h2{font-size:14px;font-weight:normal;color:#6983e4;border-bottom:1px solid #cad2ef;margin-bottom:10px;}
+.tipsModal .modal-content .modal-body .text{overflow-y:auto;height:300px;color:#a8a8a8;padding-right:9px;}
+.tipsModal .modal-content .modal-body .text span{color:#FD8655;}
+
+/*弹窗居中*/
+#myModalIcon .modal-dialog{width:666px;position:absolute;left:50%; top:50%;margin-top:-269px; margin-left:-333px;}
+#myModalText .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -335px;margin-top: -200px;}
+#myModalHead .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -335px;margin-top: -225px;}
+#myModalnrmk .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -355px;margin-top: -272px;}
+#promptModal .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -330px;margin-top: -280px;}
+#suggestsModal .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -300px;margin-top:-189px;}
+#myModaldrmk .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -237px;margin-top: -143px;}
+#myModalPic .modal-dialog{top: 50%;position: absolute;left: 50%;margin-left: -335px;margin-top: -215px;}
+
+/*模板信息*/
+.mubaninfoBar{width:1100px;height:38px;border:1px solid #ebebeb;margin:0 auto;background:#fff;margin-top:0px;margin-bottom:8px;padding:0 10px;transition:all .3s;-webkit-transition:all .3s;-moz-transition:all .3s;}
+.mubaninfoBar ul {overflow: hidden;}
+.mubaninfoBar ul li{line-height:38px;}
+.mubaninfoBar ul li span{color:#828282;font-size:12px;}
+.mubaninfoBar ul li.right span{margin-right:10px;}
+.mubaninfoBar ul li span i{color:#fd8655;font-style:normal;}
+.mubaninfoBar ul li span i a{color:#fd8655;display: inline-block;}
+.mubaninfoBar ul li.left span{float: left;}
+.mubaninfoBar ul li.left span.notice{color:#fd8655;text-indent:2rem;}
+.mubaninfoBar ul li.left i{width:22px;height:21px;display: inline-block;float: left;margin-top: 9px;margin-left:5px;}
+.mubaninfoBar ul li.left i.pic{background-position: 0px -551px;}
+.mubaninfoBar ul li.left i.pdf{background-position: -31px -551px;}
+
+/*选择模板tool*/
+.myModalxzmb{background:rgba(0,0,0,0.7);overflow-y:auto;position: fixed;}
+.xzmb-tool{width:1100px;margin:0 auto;overflow: hidden;padding:20px 0;}
+.xzmb-tool .xzmb-btn{width:171px;height:42px;border:2px solid rgba(255,255,255,.5);margin:0 auto;font-size:20px;color:#fff;line-height:38px;background-position:18px -863px;padding-left:50px;}
+.xzmb-tool .xzmb-list{margin-top:20px;}
+.xzmb-tool .xzmb-list ul li{width:339;height:480px;float:left;margin-bottom:40px;margin-right:40px;position:relative;overflow:hidden;}
+.xzmb-tool .xzmb-list ul li:nth-child(3n){margin-right:0px;}
+.xzmb-tool .xzmb-list ul li:hover .overlay{bottom:0px;transition: all .5s;-moz-transition: all .5s;-webkit-transition: all .5s;}
+.xzmb-tool .xzmb-list ul li .overlay{position:absolute;width:100%;height:100%;background:rgba(49,118,187,.8);bottom:-480px;transition: all .5s;-moz-transition: all .5s;-webkit-transition: all .5s;}
+.xzmb-tool .xzmb-list ul li .overlay .choose{width:150px;height:150px;background:url(../images/zxbjSp.png) no-repeat 0px -961px;display: block;margin:160px auto ;}
+.xzmb-tool .xzmb-list ul li .overlay .info{position: absolute;bottom:20px;color:rgba(255,255,255,.7);padding:0 5px;text-align: center;width:100%;font-size:12px;}
+.xzmb-tool .xzmb-list ul li .overlay .info s{text-decoration: none;font-weight:bold;}
+.xzmb-tool .xzmb-list ul li .overlay .info .price{margin:0 20px;}
+.xzmb-tool nav{text-align: center;}
+.xzmb-tool nav #pages a#pageactive{background:#FD8655;}
+.xzmb-tool nav a,.xzmb-tool nav span{color:#9e9e9e;margin-left:5px;border-radius:5px;border:none;}
+.xzmb-tool nav a:hover{background:#FD8655;color:#fff;}
+
+/*侧边tool*/
+.side-tool{position:fixed;right:15px;bottom:60px;}
+.side-tool a{position:relative;display:block;width:35px;height:35px;background:url(../images/zxbjSp.png) no-repeat;margin-bottom:6px;}
+.side-tool a:hover{opacity:0.9;}
+.side-tool a span.tips{position: absolute;left:-70px;top:4px;background:#6b6b6b;color:#fff;padding:5px;display: block;transition:all 0.5s;opacity:0;}
+.side-tool a:hover .tips{transform:translateX(12px);opacity:1;}
+.side-tool a.gotop{background-position:0px -691px;}
+.side-tool a.help{background-position:-86px -691px;}
+.side-tool a.suggests{background-position:-185px -691px;}
+
+.mbarea{width:1230px;margin:0 auto;}
+
+/*最新在线编辑*/
+.baseStyle{width:1100px;box-shadow: 0 2px 4px rgba(0,0,0,0.2);margin:10px auto 0 auto;/* height:auto; */padding-top:50px;position:relative;}
+.baseStyle input{font-size:inherit;background:none;border:none;width:inherit;height:inherit;font-weight:inherit;font-family:inherit;color:inherit;text-align:inherit;}
+.baseStyle .baseBorder{border:1px solid transparent;transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;}
+.baseStyle .baseBorder:hover{border:1px dashed rgba(141, 165, 252, 0.6);}
+.baseStyle .positonDiv{margin:20px 0;position: relative;border:1px dashed transparent;transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;padding: 2px 0 20px 0;}
+.baseStyle .positonDiv:hover{border:1px dashed rgba(141, 165, 252, 0.6);}
+.baseStyle .baseItem .editBtn{left:-36px;}
+.positonDiv .editBtn{width:30px;height: 100%;position:absolute;top:20px;left:-36px;display:block;opacity:0;filter: alpha(opacity=0);transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;}
+.positonDiv:hover .editBtn{opacity:1;filter: alpha(opacity=1);transform:translateY(-22px);-moz-transform:translateY(-22px);-webkit-transform:translateY(-22px);}
+.positonDiv .editBtn li{display:block;width:24px;height:24px;background-color:rgba(141, 165, 252, .5);border-radius:6px;margin-bottom:4px;}
+.positonDiv .editBtn li:hover{background-color:rgba(141, 165, 252,1);}
+.positonDiv .editBtn li.btnMove{background-position:5px -624px;}
+.positonDiv .editBtn li.btnPlus{background-position:-44px -624px;cursor:pointer;}
+.positonDiv .editBtn li.btnDel{background-position:-96px -625px;cursor:pointer;}
+.baseStyle .msgDiv .baseDel:hover .delete,.baseStyle .skillDiv .baseDel:hover .delete,.baseStyle .hobbyDiv .baseDel:hover .delete{display: none;}
+.baseStyle .baseBorder:focus,.baseStyle .baseBorder div:focus,.baseStyle .baseBorder input:focus{border: 1px solid #beccff;-moz-box-shadow: 0 0 4px #beccff;-webkit-box-shadow:inset 0 0 4px #ffba00;box-shadow: 0 0 4px #beccff;-webkit-user-select: none;transition:all 0.5s;-webkit-transition:all 0.5s;-moz-transition:all 0.5s;box-shadow:0px 0px 5px rgba();}
+.baseStyle .skillDiv .skillUl li span{cursor: pointer;}
+.tooltip-inner{padding:7px 10px;max-width:220px;}
+
+/*拖拽*/
+.sortable-ghost{border:2px dashed rgba(141, 165, 252, .5);-moz-box-shadow: 0 0 4px rgba(141, 165, 252, .5);-webkit-box-shadow: 0 0 4px rgba(141, 165, 252, .5);box-shadow: 0 0 4px rgba(141, 165, 252, .5);-webkit-user-select: none;transition: all .5s;opacity:1;-webkit-transition: all .5s;}
+.sortable-ghost dl,.sortable-ghost .baseMsg,.sortable-ghost .skillUl{opacity:0;transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;}
+.sortable-ghost:active{display:none;}
+.sortable-ghost[draggable=true]{transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;border:1px dashed rgba(255, 162, 42,.8);;transform:translateY(-10px);}
+ 
+/*删除按钮*/
+.baseDel{position: relative;border:1px solid transparent}
+.baseDel .delete{position:absolute;top: -8px;right: -10px;background:url(../images/zxbjSp.png) no-repeat -262px -627px;cursor:pointer;display: none;width:20px;height:20px;}
+.baseDel .delete:hover{ background:url(../images/zxbjSp.png) no-repeat -299px -627px;}
+
+.baseDel_{position: relative;border:1px solid transparent}
+.baseDel_ .delete_{position:absolute;top: -8px;right: -10px;background:url(../images/zxbjSp.png) no-repeat -262px -627px;cursor:pointer;display:none;width:20px;height:20px;z-index: 10;}
+.baseDel_:hover .delete_{display:block;}
+.baseDel_ .delete_:hover{ background:url(../images/zxbjSp.png) no-repeat -299px -627px;}
+
+.custDel{position: relative;border:1px solid transparent}
+.custDel .cust_delete{position:absolute;top:25px;left:20px;background:url(../images/zxbjSp.png) no-repeat -262px -627px;cursor:pointer;display:none;width:20px;height:20px;z-index:20;}
+.custDel:hover .cust_delete{display: block;}
+
+/*模块隐藏*/
+.baseDel_ .cust_delete:hover{ background:url(../images/zxbjSp.png) no-repeat -299px -625px;} 
+
+/*通用信息*/
+.baseStyle .headDiv{box-sizing: content-box;-moz-box-sizing: content-box;-webkit-box-sizing: content-box;}
+.baseStyle .baseItem{padding-bottom: 0;margin:0;}
+.baseStyle .baseItem dl{width:100%;overflow:hidden;}
+.baseStyle .baseItem dl dt{height:65px;line-height:65px;padding:0 35px;width:100%;overflow:hidden;}
+.baseStyle .baseItem dl dd{color:#254665;}
+.baseStyle .baseItem dl dt span{line-height:62px;font-weight:600;color:#000;float:left;padding-bottom:5px;display: inline-block;position: relative;}
+.baseStyle .baseItem dl dt span div.Border{position: absolute;top:50px;left: 0px;display: block;background:transparent;width:668px;cursor: pointer;border-top-style: solid;border-top-color:#000000;border-top-width:2px;}
+.baseStyle .baseItem dl dt a{display:inline-table;margin-right:6px;font-size:45px;vertical-align: middle;text-align: center;color: #254665;height:45px;float:left;}
+.baseStyle .baseItem .baseContent{margin-bottom:10px;margin: 0 40px;padding: 5px 0 5px 5px;}
+.baseStyle .baseItem .baseContent .conTitle{overflow: hidden;}
+.baseStyle .baseItem .baseContent .conTitle span{height:initial;line-height:initial;font-weight: normal;float:left;}
+.baseStyle .baseItem .baseContent .conTitle span.conTitle_time{width:180px;}
+.baseStyle .baseItem .baseContent .conTitle span.conTitle_company{width: 290px;}
+.baseStyle .baseItem .baseContent .conTitle span.conTitle_post{width: 240px;}
+.baseStyle .baseItem .baseContent .conDisc ol,.baseStyle .baseItem .baseContent .conDisc ul{padding-left:1.52em;}
+.baseStyle .fbottom_bg {z-index: 1;position: absolute;bottom: 0px;width: 1100px;left:0px;}
+
+/*默认字体大小*/
+.baseStyle .nameDiv h1{font-size:48px;}
+.baseStyle .nameDiv h2{font-size:18px;}
+.baseStyle .msgDiv .baseMsg{font-size: 16px;}
+.baseStyle .baseItem dl dt span{font-size:26px;}
+.baseStyle .baseItem dl dd{font-size: 16px;}
+
+/*右侧按钮*/
+.rsideBtn{width:50px;float:right;position:relative;}
+.rsideBtn ul{position:fixed;margin-top: -46px;}
+.rsideBtn ul li{width:124px;height:36px;border-radius:36px;background-image:url(../images/zxbjslide_btn.png);margin-bottom:11px;background-repeat: no-repeat;border:1px solid #949494;}
+.rsideBtn ul li:hover{opacity:.9;}
+.rsideBtn ul li a{height:36px;line-height:36px;display: block;padding-left:45px;color:#fff;font-size:14px;}
+.rsideBtn ul li.download{background-color:#289ee8;box-shadow:0px 4px 0px 0px #2879ab;background-position:15px 11px;border:1px solid transparent;}
+.rsideBtn ul li.checkmb{background-color:transparent;background-position:15px -32px;}
+.rsideBtn ul li.save{background-color:transparent;background-position:15px -74px;}
+.rsideBtn ul li.save a,.rsideBtn ul li.checkmb a{color:#949494;}
+/*多份简历简历名称*/
+.mubannameBar{width:1100px;height:73px;border:1px solid #ebebeb;background:#fff url(../images/mubanuserBar_bg.png) repeat-x 0px 0px;margin:0 auto;margin-top:185px;border-bottom:none;padding-top:23px;}
+.mubannameBar .nameCon{width:390px;margin:0 auto;font-size:18px;}
+.mubannameBar .nameCon .n_name{float:left;color:#cdcdcd;}
+.mubannameBar .nameCon .e_title{width:272px;border:none;border-bottom:1px solid #cdcdcd;padding:0px;font-size:inherit;color:#cdcdcd;float:left;background:transparent;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;transition:all 0.3s;-moz-transition:all 0.3s;-webkit-transition:all 0.3s;-ms--transition:all 0.3s;}
+.mubannameBar .nameCon .e_title:focus{color:#4D4D4D;}
+.mubannameBar .nameCon .dropdown .more{width:22px;height:22px;background:url(../images/zxbjSp.png) no-repeat 0px -1342px;float: right;cursor:pointer;margin-top: 4px;}
+.mubannameBar .nameCon .dropdown .more:focus,.mubannameBar .nameCon .dropdown .more:active,.mubannameBar .nameCon .dropdown .more:hover,.mubannameBar .nameCon .dropdown .more:checked{background:url(../images/zxbjSp.png) no-repeat -54px -1342px;}
+.mubannameBar .nameCon .dropdown-menu{width:304px;height:150px;border:1px solid #d2d2d2;border-radius:4px;top:38px;left: 87px;}
+.mubannameBar .nameCon .dropdown-menu ul{padding:8px;overflow-y: auto;height:107px;}
+.mubannameBar .nameCon .dropdown-menu ul li a{width:269px;height:32px;line-height:32px;display: block;color:#b5b5b5;padding-left:10px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+.mubannameBar .nameCon .dropdown-menu ul li a.current{background:#f2f2f2;color:#676161;}
+.mubannameBar .nameCon .dropdown-menu ul li a:hover{background:#F9DBCE;color:#fff;}
+.mubannameBar .nameCon .dropdown-menu .g_btn{width:100%;height:36px;line-height:36px;display: block;color:#fff;font-size:14px;text-align:center;background:#FD8655 url(../images/zxbjSp.png) no-repeat 105px -1300px;border-radius:4px;}
+.mubannameBar .nameCon .dropdown-menu .g_btn:hover{background-color:#F36D36;}
+.mubannameBar .nameCon .dropdown-menu .span_tri{position: absolute;width:11px;height:7px;background:url(../images/span_tri.png) no-repeat;display: block;right: 15px;top: -7px;}
+
+.myModalscjl.modal-dialog{width:760px;border:5px solid rgba(0,0,0,.3);border-radius:8px;}
+.jl-scjl-hd{width:100%;height: 193px;background:#f4f4f4;padding:29px 74px;border-bottom:3px solid #EBEBEB;}
+.jl-scjl-hd .img{width:100px;height:138px;border:1px solid #dcdbdb;background:#fff;padding:4px;float:left;}
+.jl-scjl-hd .text{width:450px;float: right;}
+.jl-scjl-hd .title input{font-size: 19px;font-weight:bold;color:#3b3b3b;border: none;background:transparent;width: 235px;}
+.jl-scjl-hd .title button{background: transparent;border:none;background:url(../images/import_sp.png) no-repeat 0px -1041px;padding-left:20px;margin-left: 20px;}
+.jl-scjl-hd .title{border-bottom:1px solid #ddd;padding-bottom: 21px;}
+.jl-scjl-hd .text p.time{font-size:14px;color:#b6b6b6;border-top:1px solid #fff;padding-top:12px;margin-bottom: 25px;}
+.jl-scjl-hd .text p.mb-name{font-size:14px;color:#707070;}
+.jl-scjl-hd .text p.mb-name span{color:#ff4500;}
+.jl-scjl-bd .name{font-size:14px;color:#939191;margin-bottom: 12px;}
+.jl-scjl-bd .name span{color:#000000;}
+.jl-scjl-bd{border-bottom:1px solid #ebebeb;padding:10px 74px;}
+.jl-scjl-bd .gxym_div{line-height:40px;font-size:14px;padding-bottom:20px;border-bottom:1px dashed #E9E9E9;}
+.jl-scjl-bd .gxym_div span{background: #8c8c8c;display:inline-block;padding:0 10px;color:#fff;}
+.jl-scjl-bd .gxym_div span i{font-style: normal;}
+.jl-scjl-bd .gxym_div span input{width:264px;border:none;background:transparent;padding:0 5px;font-size:14px;color:#fff;}
+.jl-scjl-bd .gxym_div span input:focus{border-bottom:1px solid #e8e8e8;}
+.jl-scjl-bd .gxym_div button{width:70px;height:40px;background:#fb845b;border:none;color:#fff;font-size:14px;margin-left:10px;}
+.jl-scjl-bd .gxym_div button:hover{background:#5B9FFB;}
+.jl-scjl-bd .gxym_div button:active,..jl-scjl-bd .gxym_div button:checked{background:#2F75D4;box-shadow:inset 0px 1px 2px 1px rgba(0,0,0,.1);}
+.jl-scjl-bd .gxym_div .error{padding-left:73px;color:#ff4646;font-size:12px;}
+.jl-scjl-bd .yssz_div{font-size:14px;color: #000000;height: 135px;padding-top:20px;}
+.jl-scjl-bd .yssz_div ul{margin-left:25px;}
+.jl-scjl-bd .yssz_div ul li{line-height:15px;overflow:hidden;margin-bottom:25px;}
+.jl-scjl-bd .yssz_div input{line-height:15px;margin-top:2px;}
+.jl-scjl-bd .yssz_div input,..jl-scjl-bd .yssz_div label,..jl-scjl-bd .yssz_div li span{float:left;display: block;}
+.jl-scjl-bd .yssz_div label{font-size:14px;line-height:15px;width:110px;margin-left:8px;color: #000;}
+.jl-scjl-bd .yssz_div li span{color:#aaa;}
+.myModalscjl .jl-btn{width:100%;text-align: center;}
+.myModalscjl .jl-btn a{width:195px;height:50px;line-height:50px;border-radius:50px;background:#ff4500;color:#fff;text-align: center;margin:0 auto;border: none;font-size:24px;margin:15px 0;display:inline-block;}
+.myModalscjl .jl-btn a:hover{opacity:.8;}
+.mubaninfoBar ul {overflow: hidden;}

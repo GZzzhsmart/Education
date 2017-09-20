@@ -1,0 +1,90 @@
+﻿/* CSS Document */
+
+
+/*---------学校简章-----------*/
+.warpper{margin:0px auto;width:980px;text-align:left;}
+.school ul{margin:5px auto;}
+.school ul li {border:1px solid #ccc;float:left;height:290px;margin-right:0px;margin-bottom:20px;width:373px;overflow:hidden;}
+.m2,.m3,.m4{margin-left:15px;color:#666;margin-bottom:5px;line-height:1.8em;text-align: left;
+}
+.m2 a{background:url(../image/zs.gif) no-repeat center center; width:95px;height:31px;display:inline-block;color:#fff;text-indent:20px;margin-left:50px;line-height: 30px;text-align: center;
+}
+.m1 img{padding:3px;}
+.m4 span{color:#333;line-height:1.8em;}
+.m4 .ck{color:#f00;}
+
+
+
+/*------二级页面----------*/
+.leftWapper{width:658px;border:1px solid #ccc;border-top:2px solid #027CC9;overflow:hidden;float:left;}
+.newsContent{ margin-bottom:10px; padding:10px; overflow:hidden; }
+.artititle{ text-align:center; font-size:25px; padding:10px 0px;}
+.artinfo{text-align:center; border-bottom:1px solid #d8d8d8; margin:0px 15px; padding:5px 0px; }
+.artitime{ color:#b0b0b0;}
+.author{color:#008bd6; }
+.artibody{ font-size:14px; line-height:1.7em; margin:0px 15px; padding-top:10px;text-align:left;}
+.artibody table{width:100%;border:none !important;}
+.artibody p{ margin-bottom:10px;}
+
+.itemMenu{height:37px;}
+.itemMenu a{float:left;width:105px;border:1px solid #999;height:30px;text-indent:30px;line-height:30px;margin-right:12px;font-weight:bold;
+background:url(http://res.delijy.com/Public/images/contentMenu.gif) 0px 0px no-repeat;}
+.itemMenu a.m01{background-position:0px -35px;}
+.itemMenu a.m02{background-position:0px -77px;}
+.itemMenu a.m03{background-position:0px -117px;}
+.itemMenu a.m04{background-position:0px -155px;}
+.itemMenu a:hover{text-decoration:none;border:1px solid #ff5555;}
+
+.rightWapper{ float:right;padding:3px;width:294px;background:#f0f9fd; }
+.rightBox{ border:1px solid #dedede;background:#fcfcfc;}
+.news_box{margin:0px 5px;}
+.news_box p{ height:35px;  text-align:left; font-size:14px; line-height:2.5em; border-bottom:1px solid #027CC9;  }
+.news_box p a{ font-size:14px; color:#027CC9; font-weight:bold;} 
+.more a{ position:absolute; right:5px; top:5px;}
+.news_box ul {  border-top:none; padding-top:3px; width:278px;}
+.news_box ul li{ text-indent:10px;height:28px;font-size:14px; }
+
+.area{padding-bottom:3px;}
+.art{margin:20px;}
+.art h1{text-align:center;font-size:27px;line-height:1.5em;}
+.author{text-align:center;margin:5px 0px;}
+.art_info{border:1px solid #facdcd;padding:3px 5px;margin:5px 0px;background:#FCECEC;}
+.artibody{font-size:14px;line-height:2.1em;padding:10px 0px 20px;}
+.share{padding:20px 0px;}
+.art_Item{font-size:14px;padding:15px 0px;}
+.artRe{margin:0px 20px;}
+.artRe p{border-bottom:1px solid #e64143;color:#e64143;font-size:14px;font-weight:bold;}
+.artRe p b{background:url(../images/schoolBg.png) no-repeat -273px -236px;width:5px;height:6px;display:inline-block;margin-left:5px}
+.artRe ul{padding:5px 0px;height:120px;}
+.artRe ul li{height:24px;background:url(../images/schoolBg.png) no-repeat -270px -248px;text-indent:10px;float:left;width:299px;}
+.artRe ul li a{color:#666;}
+.artRe ul li a:hover{color:#f00;text-decoration:underline;}
+.artRe ul li span{color:#666;}
+.comment{padding:5px 0px;border-top:1px dashed #ccc;margin:0px 20px;}
+.comment p{height:27px;}
+.comment span{font-size:14px;font-weight:bold;float:left;}
+.comment em{float:right;}
+.myform textarea{border:1px solid #ccc;width:586px;padding:5px;height:100px;font-size:12px;color:#666;}
+.myform .submitTxt{height:35px;margin-top:5px;}
+.myform .submit{float:right;border:1px solid #c0daff;background:#e6f5ff;width:75px;padding:5px 0px;cursor:pointer;}
+.myform .submit:hover{background:#c0daff;border:1px solid #365f9a;}
+.article_pro{
+	background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #F0F0F0;
+    color: #5D5D5D;
+    span-size: 12px;
+    line-height: 20px;
+    margin: 14px 10px 0;
+	text-indent:25px;
+    padding: 5px;
+}
+.author{
+	text-align:center;span-size:12px;
+	color:#666;
+}
+
+
+
+
+
+

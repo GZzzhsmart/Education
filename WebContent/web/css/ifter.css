@@ -1,0 +1,21 @@
+﻿/*---脚部footer--*/
+.footerBg{background:#f8f8f8;border-top:1px solid #ccc;height:150px;}
+.footer{margin:0px auto;width:980px;}
+.f-Con{width:630px;height:130px;text-align:left;padding-top:10px;}
+.f-menu{color:#333;}
+.f-menu a{padding:0px 5px;color:#333;}
+.f-menu a:hover{text-decoration:underline;}
+.tel{font-size:21px;color:#ff5555;font-family:Georgia;}
+.tip{color:#999;}
+.f-media{width:245px;}
+.channel{height:55px;margin-top:10px;}
+.f-logo{background:url(../images/index_bg.png) -245px -102px no-repeat;height:55px;width:55px;margin-right:5px;}
+.f-jy p{font-size:14px;color:#007cc3;}
+.f-jy p.kh{color:#ff5555;font-size:24px;font-family:"微软雅黑";padding-bottom:5px;}
+.weibo{margin-top:10px;text-align:left;float:right;}
+.weibo a{background:url(../images/index_bg.png) -150px -0px no-repeat;width:28px;height:29px;display:inline-block;text-indent:-999em;margi-left:10px;}
+.weibo a.tx{background-position:-190px 0px;margin-left:5px;}
+.weibo a.xl:hover{background-position:-150px -30px;}
+.weibo a.tx:hover{background-position:-190px -30px;}
+.left{float:left;}
+.right{float:right;}

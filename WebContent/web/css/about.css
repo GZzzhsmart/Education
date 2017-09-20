@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.leftBox{width:190px; margin-right:20px; float:left; overflow:hidden;}
+.rightBox{width:770px;float:left; overflow:hidden;}
+.news_title{text-align:left;}
+.newsContent{border:1px solid #ccc;border-top:2px solid #0770b9;}
+.artititle{padding:10px 5px;}
+.artibody{margin:20px;text-align:left;}
+.lc p{ background:url(../image/company_title.gif) no-repeat; height:37px; width:190px; overflow:hidden; padding-left:28px; font-size:16px; color:#fff; font-weight:bold; line-height:2.5em;}
+.lc p span{font-size:12px; span-family:Verdana;color:#0770b9; font-weight:normal;}
+.lc_Menu div{border:1px solid #d8d8d8; border-top:none; background:url(../image/company_menu.jpg) repeat-x; height:33px; overflow:hidden; font-size:14px; line-height:2.5em; text-indent:35px; }
+.lc_Menu div a{font-size:14px;color:#666;background:url(../images/right_ico.jpg) no-repeat center right; padding-right:60px;  float:left; width:120px; }
+.lc_Menu div a:hover{color:#008bd6;}
+.lc_Menu div.on a{ color:#666;background:url(../images/down_ico.jpg) no-repeat center right; padding-right:60px; width:120px; float:left; float:left; }
+.lc_Menu ul{border:1px solid #d8d8d8; border-top:none; }
+.lc_Menu ul li a{ background:url(../images/edu-left.jpg) no-repeat 32px center;  padding-left:10px;  margin:0px 5px; height:30px; overflow:hidden;  border-bottom:1px dashed #d8d8d8; line-height:2.5em; display:block; text-indent:30px;  color:#008bd6;}
+.lc_Menu ul li a.on{ span-weight:bold;}
+.lc_Menu ul li a.last{border-bottom:none;}
+.on{font-weight:bold;}

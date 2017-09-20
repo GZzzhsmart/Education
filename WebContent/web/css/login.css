@@ -1,0 +1,61 @@
+﻿/* 全局样式-------base-css-------*/
+*{ margin:0; padding:0; outline:none 0px;}
+a{ text-decoration:none; border:0; color:#666; cursor:pointer;}
+a:hover{ color:#3f3f3f;}
+a:focus{ outline:0 none;}
+img,submit,option,input { border:none medium; vertical-align:middle;  }
+ul,li{ list-style:none;}
+em{ font-style:normal; font-weight:bold;}
+body{ color:#666; text-align:center; font-size:12px; line-height:2em; font-family:"宋体",Arial, Helvetica, sans-serif; }
+.gray{ color:#676767;}
+.red{color:#f00;}
+.clear{ clear:both; height:1px; margin:0; padding:0; overflow:hidden;}
+
+#wapper{width:980px; margin:5px auto;}
+.headTop{width:100%;height:70px;padding-top:7px;}
+.leftTop{float:left;font-size:27px;color:#3380ad;}
+.leftTop span{font-size:27px;color:#f00;font-family:"微软雅黑";}
+.rightTop{float:right;}
+.rightTop span{	display:block;text-align:left;}
+.rightTop span b{font-size:25px; font-weight:normal; color:red; font-family:Georgia, "Times New Roman", Times, serif;} 	
+
+#wapperContent{ border-top:none; height:410px;	width:978px;border:1px solid #ccc; width:980px;margin-bottom:5px; overflow:hidden;}
+.conTop{height:27px;}
+.conTop a{padding:5px 10px 5px 20px;float:right;background:url(../image/home.gif) no-repeat left center;}
+.conTop a:hover{text-decoration:underline;color:#f00;}
+
+
+.main{margin:50px;}
+.mainLeft{background:url(../image/loginMain.jpg) no-repeat left center;width:510px;height:300px;float:left;}
+.mainRight{float:left;width:300px;padding-left:50px;}
+.loginName{border-bottom:1px solid #74746d;text-align:left;font-size:14px;font-weight:bold;color:#333;padding-bottom:5px;}
+.loginName img{padding-left:5px;}
+
+.loginFrom{ padding-top:15px;}
+.loginFrom p{text-align:left;border:1px solid #ccc;height:35px;}
+.codeItem .last{width:175px;float:left;}
+.codeItem{width:300px;height:37px;}
+.number{float:right;background:#ccc;color:#f00;height:35px;padding:0px 5px;width:75px;}
+.formInfo{ font-size:14px;}
+.item{height:60px;}
+.formInfo p label-bak{width:65px;float:left;background:url(../image/usernameBg.gif) no-repeat left center;height:35px;text-indent:-9999px;margin-bottom:3px;}
+.formInfo p label{width:65px;float:left;height:35px;text-indent:5px;line-height: 35px;margin-bottom:3px;text-align: right;
+}
+
+//.formInfo p label.psd{background:url(../image/psdBg.gif) no-repeat;}
+//.formInfo p label.code{background:url(../image/codeBg.gif) no-repeat;}
+.hide{display:none;}
+.error{display:block;color:#f00;font-size:12px;background:url(../image/tipBg.gif) no-repeat; height:21px;width:300px;}
+.txt{ border:none;width:223px; padding:0px 5px;height:35px; font-size:14px; float:left;line-height:2.5em; }
+.loginFrom p.last .txt{width:100px;}
+.loginFrom p.loginBtn{border:none;margin-top:3px;}
+.submit{ height:35px;width:300px;background:url(../image/loginSbm.gif) no-repeat;text-indent:-9999em;float:left;cursor:pointer;}
+.submit:hover{background-position:0px -35px;}
+.other{text-align:right;color:#999;padding-top:10px;}
+.other a{color:#f00;font-weight:bold;}
+.other a:hover{text-decoration:underline;}
+
+#footer{ width:980px;}
+.link a{ padding:0px 5px;color:#666;}
+.link a:hover{text-decoration:underline;}
+.copyright{ color:#a0a0a0; line-height:2em;}

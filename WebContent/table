@@ -1,0 +1,386 @@
+--创建数据库
+create database educationitem;
+
+--创建省份表
+create table province
+(
+	provinceId int identity(1,1) not null primary key,
+	provinceName varchar(20) not null unique
+)
+select * from province order by provinceId
+--创建城市表
+create table city
+(
+	cityId int identity(1,1) primary key not null,
+	cityName varchar(30) not null,
+	provinceId int references province(provinceId)
+)
+--查询列表
+select * from city;
+select * from province;
+
+--用户表
+create table users
+(
+	userid int identity(1,1) primary key not null,--用户
+	mobile varchar(20) unique,--手机号
+	password varchar(50) not null,--密码
+	user_name varchar(50) not null,--姓名
+	sex int check(sex=0 or sex=1),--性别0代表男，1代表女
+	home_address varchar(500),--家庭住址
+	email varchar(100),--邮箱地址
+	register_date datetime default getdate(),--用户注册时间
+	provinceId int not null,--所在省份id
+	cityId int not null,--所在城市id
+	user_type int check(user_type = 1 or user_type=2),--用户类型1是学生，2是老师
+	remainMoney float not null --余额
+)
+select c.*,s.provinceName from users c inner join province s on c.provinceId=s.provinceId where userid=1
+select * from users
+update users set mobile='12345678901' where userid=1
+alter table users add constraint  up_mobile  unique(mobile);
+update users set mobile='18370676184' where userid=5
+select * from users where mobile='18720865791' and password='4B904BD246C63FE9309EAF09C63E1516'
+update users set user_type=2 where userid=3
+insert into users values('17345069796','4B904BD246C63FE9309EAF09C63E1516','赖勇建',0,'赣州市','139邮箱','14','171','1',0);
+insert into users values('18720865791','4B904BD246C63FE9309EAF09C63E1516','曾志湖',0,'吉安市','139邮箱','14','171','1',0);
+insert into users values('18370676182','4B904BD246C63FE9309EAF09C63E1516','邱智才',0,'赣州市','139邮箱','34','420','2',0);
+insert into users values('18370676183','4B904BD246C63FE9309EAF09C63E1516','伍群斌',0,'赣州市','139邮箱','34','420','1',0);
+insert into users values('18370676184','4B904BD246C63FE9309EAF09C63E1516','小芳',0,'赣州市','139邮箱','34','420','1',0);
+
+select u.*,p.provincename,c.cityname from users,province,city where userid=1
+
+select c.*,s.cityName from users c inner join city s on c.cityId=s.cityId where userid=1
+
+select top 15 userid,mobile,user_name,sex,home_address,email,register_date,user_type,remainMoney,isnull(p.provinceName,'未知') provinceName,isnull(c.cityName,'未知') cityName from users u left join province p on u.provinceid=p.provinceid left join city c on u.cityid=c.cityid  where userid not in(select top 0 userid from users) order by userid
+
+select c.*,s.provinceName from users c inner join province s on c.provinceId=s.provinceId where userid=1;  
+
+select c.*,s.cityName from users c inner join city s on c.cityId=s.cityId where userid=1;  
+
+select top 3 userid,mobile,user_name,sex,home_address,email,register_date,user_type,remainMoney,isnull(p.provinceName,'未知') provinceName,isnull(c.cityName,'未知') cityName from users u left join province p on u.provinceid=p.provinceid left join city c on u.cityid=c.cityid where userid not in(select top 3 userid from users) order by userid;
+
+select * from city;
+select * from province
+select * from users;
+insert into users values('');
+--充值记录表
+create table moneyRecord
+(
+	record_id int identity(1,1) primary key,--充值id
+	userid int references users(userid),--用户id
+	pay_date datetime,--充值时间
+	pay_money float --充值金额
+)
+select * from moneyRecord;
+drop table moneyRecord
+
+--管理员表
+create table Manager
+(
+	manager_id int identity(1,1) primary key,--管理员id
+	manager_account varchar(50) not null,--账户
+	manager_password varchar(100) not null,--密码
+	manager_name varchar(50) ,--姓名
+	sex int check(sex=0 or sex=1),--性别0是男，1是女
+	contact varchar(50) ,--联系方式
+	status int check(status=1 or status=0) --1有效，0无效
+)
+drop table manager;
+select * from manager;
+insert into manager values('胡歌','4B904BD246C63FE9309EAF09C63E1516','胡歌','0','18720865791','1');
+--新闻资讯表
+create table NewMsg
+(
+	new_msg_id int identity(1,1) primary key,--资讯id
+	msg_name varchar(500) not null ,--资讯名称
+	one_word varchar(500) , -- 一句话
+	msg_content text ,--html网页(内容)
+	msg_content_url varchar(500) , --内容网址
+	publish_date datetime,--发布时间
+	publish_username varchar(50), --发布人
+	effective int check(effective=0 or effective=1),--0无效，1有效
+	seq int,--排序号(大号排前序号*10)
+	newsType int check(newsType=0 or newsType=1), --0是通知，1是公告
+	Image_Url varchar(500), --图片网址
+)
+select * from NewMsg;
+drop table NewMsg;
+update NewMsg set Image_Url='attached/news/201702090254555749.png' where new_msg_id=5;
+select top 3 new_msg_id,msg_name,one_word,msg_content,msg_content_url,publish_date,publish_username,effective,seq,newsType,image_Url from NewMsg  where new_msg_id not in(select top 0 new_msg_id from NewMsg order by seq desc) order by seq desc
+
+--银行表
+create table bank
+(
+	bank_id int identity(1,1) primary key,--银行id
+	bank_name varchar(100) not null,--银行名称
+)
+select * from bank;
+insert into bank values('中国银行');
+
+--注册讲师表
+create table Teacher
+(
+	userid int references users(userid) unique,--教师id
+	teacher_introduce varchar(1000) ,--教师简介
+	teacher_special varchar(500),--教师特长
+	teacher_length varchar(50),--教龄
+	education varchar(50),--学历
+	head_picture_url varchar(500) not null,--头像图片网址
+	bank_id int references bank(bank_id),--银行id
+	accountNo varchar(30),--银行账户
+	accountName varchar(30),--开户人姓名
+	grade_id int references teacherGrade(grade_id),--讲师分类
+	status int check(status=0 or status=1 or status=2 or status=3),--状态0:未审核，1：已审核；2.审核未通过；3.封号
+	reason varchar(50) not null,--未通过原因
+
+)
+alter table Teacher add constraint fk_Teacher_users foreign key(userid) references users(userid);
+alter table teacher add grade_name varchar(30)
+ 
+select t.*,b.bank_name from teacher t inner join bank b on t.bank_id=b.bank_id where userid=1
+select top 3 userid,teacher_introduce,teacher_special,teacher_length,education,head_picture_url,accountNo,accountName,status,reason,b.bank_name,g.grade_name,t.grade_id from teacher t inner join bank b on t.bank_id=b.bank_id inner join teacherGrade g on t.grade_id=g.grade_id where userid not in(select top 0 userid from teacher order by status) order by status;
+select * from users;
+update users set user_type=2 where userid=7;
+select * from teacher;
+select * from Course;
+update teacher set head_picture_url='attached/news/1.jpg' where userid=3;
+insert into teacher values('3','刻苦','structs','19年','博士','attached/news/1.jpg','1','中国银行','赖国荣','1','1','0');
+update moneyRecord set  pay_date=getdate(),  pay_money=0.0+20.0 where record_id=0
+update users set remainMoney=0.0+20.0 where userid=0
+select m.*,u.user_name from moneyRecord m inner join users u on m.userid=u.userid where m.userid=0
+select  top 3 c.*,s.user_name from   moneyRecord c inner join users s  on c.userid=s.userid where record_id not in(select top 0 record_id from moneyRecord)
+update Teacher set status='0'where userid=1
+update teacher set reason=0 where userid=2
+update teacher set accountname='曾志湖' where userid=2;
+update users set user_name='赖国荣' where userid=3
+update Course set userid=3 where course_id=7
+drop table teacher 
+delete teacher where userid=2
+insert into teacher values('1','勤奋认真','Java语言','10年','博士','image/1.jpg','1','中国银行','赖勇建','1','0','有虚假信息');
+insert into teacher values('2','诚实','JSPweb网站开发','5年','本科','image/2.jpg','1','中国银行','曾志湖','1','0','造假');
+
+
+
+--讲师等级表
+create table teacherGrade
+(
+	grade_id int identity(1,1) primary key,--分类id
+	Grade_name varchar(100) not null,--分类名称(（认证讲师，中级讲师，高级讲师，特级讲师，金牌讲师）
+	Grade_Percent decimal(18,2)--分成比例（0.6,0.7,0.8,0.9）
+)
+
+select * from teachergrade;
+insert into teachergrade values('认证讲师',0.5);
+insert into teachergrade values('中级讲师',0.6);
+insert into teachergrade values('高级讲师',0.7);
+insert into teachergrade values('特级讲师',0.8);
+insert into teachergrade values('金牌讲师',0.9);
+
+--课程表
+create table Course
+(
+	course_id int identity(1,1) primary key,--课程id
+	course_name varchar(500)not null,--课程名称
+	picture_url varchar(500)not null,--课程图片网址
+	one_word varchar(500),--一句话
+	introduce varchar(2000),--课程介绍
+	course_count int,--课时数
+	price float ,--价格
+	discount float,--折扣
+	effective int check(effective=0 or effective=1 or effective=2),--有效与否(0：未发布；1：已发布 2:停售)
+	replay_date datetime ,--发布时间
+	user_name varchar(50) ,--发布人
+	seq int,--排序(大号排前序号*10)
+	charge_type int check(charge_type=0 or charge_type=1),--收费类型0免费，1会员
+	status int check(status=0 or status=1 or status=2)not null,--0:未审核，1：已审核；2.审核未通过
+	reason varchar(500) not null,--未通过原因
+	userid int--教师表id
+)
+alter table Course add constraint ck_effective check(effective=0 or effective=1 or effective=2);
+
+
+select t.*,b.bank_name from teacher t inner join bank b on t.bank_id=b.bank_id where userid=1
+select * from Course;
+update Course set introduce='javascript程序员必备课程' where course_id=4
+select * from teacher;
+update Course set discount=28 where course_id=7
+select * from Course c where course_id=1
+update course set one_word='MySql从入门到精通' where course_id=1
+update course set picture_url='attached/news/16.jpg' where course_id=1
+update section set section_url='attached/section/201702151140126517.swf' where section_id=2
+update course set reason='课程不好' where course_id=2
+alter table Course add constraint fk_Course_Teacher foreign key(grade_id) references teacher(grade_id);
+
+select * from  Course where course_name like '%j%';
+select * from Course where status like '%1%';
+select * from Course where user_name like '%赖%';
+
+select c.*,s.accountName from  Course c inner join Teacher s on c.userid=s.userid where s.accountName like '%""%' or c.course_name like '%""%' or c.status like '%1%';
+
+
+
+update Course set picture_url='image/2.jpg' where course_id=2;
+insert into Course values('java','image/1.jpg','java从入门到精通','程序员必备课程','30','40','3','1','2017-2-11','胡歌','4','0','0','课程不合格');
+select * from  Course where course_name like '%j%';
+select c.*,s.accountName from  Course c inner join Teacher s on c.userid=s.userid where accountName like '%小%';
+select * from Course where status like '%1%';
+--课件节表（课件子表）
+create table Section
+(
+	section_id int identity(1,1) primary key,--节id
+	course_id int references Course(course_id),--课程id
+	section_name varchar(100) not null,--节名称
+	time_length int,--视频记录时间（分钟）
+	section_url varchar(500),--课件内容网址
+	section_content text,--资料内容(html)
+	remark varchar(1000),--备注
+	free int check(free=0 or free=1),--0免费，1收费
+	seq int,--排序(大号排前序号*10)
+	status int check(status=0 or status=1 or status=2)not null,--0:未审核，1：已审核；2.审核未通过
+	reason varchar(50) not null--未通过原因
+)
+update Section set section_name='第一章 Ajax的基础',section_url='attached/section/201702151136316080.swf',section_content='掌握Ajax的基础知识',free='0',seq='0' where section_id=
+insert into section values('2','第一章 JSP的入门体验','attached/section/201702140818328567.swf','掌握JSP的基础知识','0','1','0');
+select * from section;
+select * from moneyrecord;
+select * from users;
+select * from UserCourseEval where userid=1
+insert into moneyrecord values(1,getdate(),10);
+select m.*,u.user_name from moneyRecord m inner join users u on m.userid=u.userid where m.userid=1
+select * from course;
+select * from UserCourseEval
+select userid from UserCourseEval where course_id=1
+update section set reason=0 where section_id=3
+--用户课程评价表
+create table UserCourseEval
+(
+	user_course_eval_id int identity(1,1) primary key,--评价id
+	userid int references users(userid),--用户id
+	course_id int references Course(course_id),--课程id
+	eval_level int,--评级(1/2/3)
+	eval_content varchar(2000) not null,--评价内容
+	eval_date datetime,--评价时间
+	user_name varchar(50),--用户名称
+)
+select * from UserCourseEval;
+select * from course where course_id=1
+select * from course where course_id=2
+select top 15 pay_record_id,courseid,pay_date,pay_money,payer,u.userid,c.course_name from PayRecord p inner join course c on c.course_id=p.courseid inner join users u on u.userid=p.userid where pay_record_id not in(select top 0 pay_record_id from payrecord)
+
+select top 15 pay_record_id,courseid,pay_date,pay_money,payer,u.userid,c.course_name from PayRecord p inner join course c on c.course_id=p.courseid inner join users u on u.userid=p.userid where pay_record_id not in(select top 0 pay_record_id from payrecord)
+select top 3 * from UserCourseEval where user_course_eval_id not in(select top 0 user_course_eval_id from UserCourseEval)
+select * from course;
+insert into UserCourseEval values('1','2','1','课程非常实用',getdate(),'赖勇建');
+select top 3 course_id,course_name,picture_url,one_word,introduce,course_count,price,discount,effective,replay_date,user_name,seq,charge_type,status,reason from Course  where course_id not in(select top 0 course_id from Course order by seq desc) order by seq desc
+update UserCourseEval set user_name='赖勇建' where user_course_eval_id=2
+select m.*,u.user_name from moneyRecord m inner join users u on m.userid=u.userid where m.userid=1
+
+select * from teacher
+select top 3 userid,teacher_introduce,teacher_special,teacher_length,education,head_picture_url,accountNo,accountName,status,reason,b.bank_name,g.grade_name,t.grade_id from teacher t inner join bank b on t.bank_id=b.bank_id inner join teacherGrade g on t.grade_id=g.grade_id where userid not in(select top 1 userid from teacher order by status) order by status;
+select top 3 user_course_eval_id,userid,course_id,eval_level,eval_content,eval_date,u.user_name,c.course_name from UserCourseEval U inner join users u on u.userid=U.userid inner join course c on c.course_id=U.course_id where user_course_eval_id not in(select top 1 user_course_eval_id from UserCourseEval);
+select t.*,b.bank_name from teacher t inner join bank b on t.bank_id=b.bank_id where userid=1
+select u.*,c.course_name from UserCourseEval u inner join course c on u.course_id=c.course_id where user_course_eval_id=2
+select pay_record_id,courseid,pay_date,pay_money,payer,p.userid,c.course_name from PayRecord p inner join course c on p.courseid=c.course_id where pay_record_id=1
+select top 3 pay_record_id,courseid,pay_date,pay_money,payer,u.userid,c.course_name from PayRecord p inner join course c on c.course_id=p.courseid inner join users u on u.userid=p.userid where pay_record_id not in(select top 0 pay_record_id from payrecord);
+delete 
+--买课记录表
+create table PayRecord
+(
+	pay_record_id int identity(1,1) primary key,--缴费id
+	userid int references users(userid),--用户id
+	courseid int ,--课程id
+	pay_or_return int check(pay_or_return=0 or pay_or_return=1),--0缴费，1退费
+	pay_date datetime,--付款时间
+	pay_money float,--付款金额
+	discount_money float ,--优惠券金额
+	pay_type int check(pay_type = 0 or pay_type = 1),--付款方式(0支付宝/1微信
+	card_num varchar(100),--支付宝号，微信号
+	payer varchar(50),--付款人
+	order_number varchar(500),--订单号
+	pay_status	int check(pay_status=0 or pay_status=1),--缴费状态(0未支付/1已支付)
+	isCash int   check(isCash=0 or isCash=1)--是否提现（0：未提现；1：已提现）
+
+)
+select * from PayRecord;
+select * from moneyrecord;
+select * from users;
+select * from manager;
+select * from teacher;
+select * from course;
+select * from CashRecord;
+select * from teachergrade;
+delete course where course_id=9
+select * from section;
+select * from couponCode;
+update course set charge_type=1 where course_id=8
+select t.*,b.bank_name from teacher t inner join bank b on t.bank_id=b.bank_id where userid=2
+update course set userid=2 where course_id=8
+select  top 3 c.*,s.user_name from   moneyRecord c inner join users s  on c.userid=s.userid where record_id not in(select top 0 record_id from moneyRecord)
+select top 1 * from couponCode where status=0 and couponRecordId in (select couponRecordId from couponRecord where userid=(select userid from course where course_id=2));
+--提现记录表
+create table CashRecord
+(
+	pay_record_id int identity(1,1) primary key,--缴费id
+	userid int references users(userid),--用户id
+	course_id int,--课程id
+	cash_date datetime,--提现时间
+	pay_money float,--提现金额
+	Incom_money float, --平台收入金额
+	status int check(status=0 or status=1 or status=2 or status=3), --0:未审核，1：已审核；2.审核未通过；3.已付款
+	reason varchar(50) not null, -- 未通过原因
+)
+
+select top 2 pay_record_id,courseid,pay_date,pay_money,payer,u.userid,c.course_name from PayRecord p inner join course c on c.course_id=p.courseid inner join users u on u.userid=p.userid where pay_record_id not in(select top 1 pay_record_id from payrecord);
+--在线留言板表
+create table Forum
+(
+	forum_id int identity(1,1) primary key, --编号
+	userid int,--提问用户id
+	ReplayUserId int,--回复用户id 
+	fourm_type int check(fourm_type=1 or fourm_type=2),--1：提问；2：回复
+	Content varchar(1000),--内容
+	forum_date datetime,--回复时间
+)
+select * from forum;
+--系统日志表
+create table SysLog
+(
+	sys_log_id int identity(1,1) primary key,--系统日志id
+	manager_id int references manager(manager_id),--管理员id
+	Type int,--日志类型（新增，修改，删除，登录，修改密码）
+	Content varchar(500),--日志内容
+	create_date datetime,--发生时间
+	ip_address varchar(50)--IP地址
+)
+
+
+drop table ExchangeRecord
+drop table ExchangeCode
+--优惠券活动表
+create table CouponRecord
+(
+	couponRecordId int identity(1,1) primary key,--兑换记录id
+	activityName varchar(500),--活动名称
+	activityDesc varchar(2000),--活动说明
+	userid int ,--创建人id
+	createDate datetime --创建时间
+)
+--优惠券活动明细表
+create table CouponCode
+(
+	couponCodeId int identity(1,1) primary key,--兑换码id
+	couponRecordId int references CouponRecord(couponRecordId),--兑换记录id
+	userid int ,--用户id
+	code varchar(100),--兑换码
+	couponMoney int,--兑换金额
+	status int check(status=0 or status=1 or status=2),--0未领用，1已领用，2已过期
+	validDay int,--有效天数
+	useDate datetime--使用时间
+)
+update section set section_url='attached/section/201702170809174528.swf' where section_id=3
+select * from users;
+select * from section;
+select * from CouponRecord;
+select * from CouponCode;
+select * from teacher;

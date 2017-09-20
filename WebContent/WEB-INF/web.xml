@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<filter>
+		<filter-name>FilterEncoding</filter-name>
+		<filter-class>base.FilterEncoding</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>FilterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  <servlet>
+    <servlet-name>cityServlet</servlet-name>
+    <servlet-class>servlet.cityServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>provinceServlet</servlet-name>
+    <servlet-class>servlet.provinceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>gradeServlet</servlet-name>
+    <servlet-class>servlet.gradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>bankServlet</servlet-name>
+    <servlet-class>servlet.bankServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>managerServlet</servlet-name>
+    <servlet-class>servlet.managerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>usersServlet</servlet-name>
+    <servlet-class>servlet.usersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>teacherServlet</servlet-name>
+    <servlet-class>servlet.teacherServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>moneyRecordServlet</servlet-name>
+    <servlet-class>servlet.moneyRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>upload.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadVedioServlet</servlet-name>
+    <servlet-class>upload.UploadVedioServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsMsgServlet</servlet-name>
+    <servlet-class>servlet.NewsMsgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>courseServlet</servlet-name>
+    <servlet-class>servlet.courseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>sectionServlet</servlet-name>
+    <servlet-class>servlet.sectionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>usercourseServlet</servlet-name>
+    <servlet-class>servlet.usercourseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>couponRecordServlet</servlet-name>
+    <servlet-class>servlet.couponRecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>forumServlet</servlet-name>
+    <servlet-class>servlet.forumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Course</servlet-name>
+    <servlet-class>servlet.Course</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>payrecordServlet</servlet-name>
+    <servlet-class>servlet.payrecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>cashrecordServlet</servlet-name>
+    <servlet-class>servlet.cashrecordServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>cityServlet</servlet-name>
+    <url-pattern>/cityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>provinceServlet</servlet-name>
+    <url-pattern>/provinceServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>gradeServlet</servlet-name>
+    <url-pattern>/gradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>bankServlet</servlet-name>
+    <url-pattern>/bankServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>managerServlet</servlet-name>
+    <url-pattern>/managerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>usersServlet</servlet-name>
+    <url-pattern>/usersServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>teacherServlet</servlet-name>
+    <url-pattern>/teacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>moneyRecordServlet</servlet-name>
+    <url-pattern>/moneyRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/uploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadVedioServlet</servlet-name>
+    <url-pattern>/uploadVedioServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsMsgServlet</servlet-name>
+    <url-pattern>/newsMsgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>courseServlet</servlet-name>
+    <url-pattern>/courseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sectionServlet</servlet-name>
+    <url-pattern>/sectionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>usercourseServlet</servlet-name>
+    <url-pattern>/usercourseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>couponRecordServlet</servlet-name>
+    <url-pattern>/couponRecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>forumServlet</servlet-name>
+    <url-pattern>/forumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Course</servlet-name>
+    <url-pattern>/Course</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>payrecordServlet</servlet-name>
+    <url-pattern>/payrecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>cashrecordServlet</servlet-name>
+    <url-pattern>/cashrecordServlet</url-pattern>
+  </servlet-mapping>
+  
+   <jsp-config>
+	  	<taglib>
+	  		<taglib-uri>/demotag</taglib-uri>
+	  		<taglib-location>/WEB-INF/lib/tld/mytag.tld</taglib-location>
+	  	</taglib>
+	  </jsp-config>
+	  
+	  <resource-ref>
+		  <res-ref-name>jdbc/dbsample</res-ref-name>
+		  <res-type>javax.sql.DataSource</res-type>
+		  <res-auth>Container</res-auth>
+      </resource-ref>
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+	   
+	  <error-page>
+	  	<error-code>500</error-code>
+	  	<location>/error1.jsp</location>
+	  </error-page>
+	   <error-page>
+	  	<error-code>404</error-code>
+	  	<location>/error1.jsp</location>
+	  </error-page>
+	  
+</web-app>

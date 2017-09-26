@@ -94,22 +94,6 @@
   </servlet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <servlet-mapping>
     <servlet-name>cityServlet</servlet-name>
     <url-pattern>/cityServlet</url-pattern>
@@ -201,16 +185,15 @@
       </resource-ref>
 	
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>localhost:8080/education/web/index.jsp</welcome-file>
   </welcome-file-list>
-	   
+	
 	  <error-page>
-	  	<error-code>500</error-code>
-	  	<location>/error1.jsp</location>
+		<error-code>500</error-code>
+		<location>/error1.jsp</location>
 	  </error-page>
 	   <error-page>
-	  	<error-code>404</error-code>
-	  	<location>/error1.jsp</location>
+		<error-code>404</error-code>
+		<location>/error1.jsp</location>
 	  </error-page>
-	  
 </web-app>

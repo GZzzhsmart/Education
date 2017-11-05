@@ -2,9 +2,13 @@
 在线视频教学平台
 
 开发环境：tomcat6，jdk1.6
+
 开发工具：myeclipse，SqlServer数据库
+
 开发使用技术：MVC开发模式（Servlet+javabean+jsp），大量运用jstl标签
+
 项目描述：项目整体分为：讲师，学生，管理员三个子系统
+
 访问地址：主页（localhost:8080/education/web/index.jsp）
 
 主要功能：
